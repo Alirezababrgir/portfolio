@@ -1,13 +1,39 @@
 import './App.css';
 import { Button } from '@mui/material';
 import { FaBeer } from "react-icons/fa";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import rtlPlugin from 'stylis-plugin-rtl';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+import { prefixer } from 'stylis';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+
+const theme = createTheme({ //create theme for mui rtl
+  direction: 'rtl',
+});
+
+const cacheRtl = createCache({
+  key: 'muirtl',
+  stylisPlugins: [prefixer, rtlPlugin],
+});
 
 function App() {
   return (
-    <div className="App">
-    <FaBeer/> hello
-    <Button variant="contained">click me</Button>
-    </div>
+    <CacheProvider value={cacheRtl}>
+      <ThemeProvider theme={theme}>
+        <HelmetProvider>
+          <Helmet>
+            <title>بیوگرافی من|صفحه اصلی</title>
+          </Helmet>
+          <div className='App'>
+            <p>hello mui<FaBeer /></p>
+            <Button variant='contained'>click me</Button>
+          </div>
+        </HelmetProvider>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }
 export default App;
