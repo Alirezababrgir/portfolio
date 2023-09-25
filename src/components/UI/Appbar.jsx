@@ -20,7 +20,7 @@ const Appbar = () => {
       <ElevationScroll>
         <AppBar>
           <Toolbar>
-            <Button variant="outlined" color="warning">کلیک کن</Button>
+            <Button variant="contained" color="warning">کلیک کن</Button>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

@@ -5,8 +5,9 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { prefixer } from 'stylis';
 import { ThemeProvider } from '@mui/material/styles';
-import  Appbar  from './components/UI/Appbar';
+import Appbar from './components/UI/Appbar';
 import Theme from './components/UI/theme';
+import { Typography } from '@mui/material';
 
 
 const cacheRtl = createCache({
@@ -25,6 +26,7 @@ function App() {
             <title>بیوگرافی من | صفحه اصلی</title>
           </Helmet>
           <Appbar/>
+          <Typography variant='h3'>
           {[...new Array(120)]
             .map(
               () => `Cras mattis consectetur purus sit amet fermentum.
@@ -33,6 +35,7 @@ Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
             )
             .join('\n')}
+            </Typography>
         </HelmetProvider>
       </ThemeProvider>
     </CacheProvider>
