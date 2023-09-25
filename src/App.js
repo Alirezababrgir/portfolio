@@ -12,6 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({ //create theme for mui rtl
   direction: 'rtl',
+  typography:'Vazir,Roboto'
 });
 
 const cacheRtl = createCache({
@@ -25,11 +26,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <HelmetProvider>
           <Helmet>
-            <title>بیوگرافی من|صفحه اصلی</title>
+            <title>بیوگرافی من | صفحه اصلی</title>
           </Helmet>
           <div className='App'>
-            <p>hello mui<FaBeer /></p>
-            <Button variant='contained'>click me</Button>
+            <p>سلام پی<FaBeer /></p>
+            <Button variant='contained'>کلیک کن</Button>
           </div>
         </HelmetProvider>
       </ThemeProvider>
