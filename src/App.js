@@ -4,30 +4,22 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { prefixer } from 'stylis';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import  Appbar  from './components/UI/Appbar';
+import Theme from './components/UI/theme';
+
 
 const cacheRtl = createCache({
   key: 'muirtl',
   stylisPlugins: [prefixer, rtlPlugin],
 });
 
-const darkTheme = createTheme({//create darktheme for mui rtl
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#1976d2',
-    },
-    direction: 'rtl',
-    typography:'Vazir,Roboto'
-  },
-});
 
 
 function App() {
   return (
     <CacheProvider value={cacheRtl}>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={Theme}>
         <HelmetProvider>
           <Helmet>
             <title>بیوگرافی من | صفحه اصلی</title>
