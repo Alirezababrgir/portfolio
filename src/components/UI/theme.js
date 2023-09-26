@@ -1,18 +1,43 @@
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material"; //theme generation
+import { blue, red } from "@mui/material/colors";
 const Theme = createTheme({
-    palette: {
-      mode: 'light',
-      primary: {
-        main:  '#7986cb',
-      },
-      direction: 'rtl',
-      typography:'Vazir,Roboto',
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#7986cb',
     },
-    typography:{
-      fontSize:"2rem",
-      button:{
-        fontSize:"1rem"
+    direction: 'rtl',
+    typography: 'Vazir,Roboto',
+  },
+  typography: {
+    fontSize: "2rem",
+    button: {
+      fontSize: "1rem"
+    },
+  },
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true, //disabled button animation
       },
-    }
-  });
-  export default Theme;
+    },
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: 'dashed' },
+          style: {
+            textTransform: 'none',
+            border: `2px dashed ${blue[500]}`,
+          },
+        },
+        {
+          props: { variant: 'dashed', color: 'secondary' },
+          style: {
+            border: `4px dashed ${red[500]}`,
+          },
+        },
+      ],
+    },
+  },
+});
+export default Theme;
