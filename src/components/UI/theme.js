@@ -18,7 +18,7 @@ const Theme = createTheme({
   components: {
     MuiButtonBase: {
       defaultProps: {
-        disableRipple: true, //disabled button animation
+        disableRipple: false, //disabled button animation
       },
     },
     MuiButton: {

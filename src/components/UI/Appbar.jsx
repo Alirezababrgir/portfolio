@@ -2,6 +2,7 @@ import { cloneElement } from "react";
 import { AppBar, Toolbar, Button, useScrollTrigger } from "@mui/material";
 import styled from "@emotion/styled"; //customized tag style by style component
 
+
 const Customebtn = styled(Button)`color:red;:hover {color: blue;}`; //customized button style by style component
 
 const Appbar = () => {
