@@ -26,20 +26,16 @@ const MainLayout = ({ children }) => {
           </Helmet>
           {children}
           <Appbar />
-          <div style={{marginTop: 70}}/>
-          <Box  sx={{
+          <div style={{ marginTop: 64 }} />
+          <Box sx={{
             backgroundColor: 'primary.dark',
-            '&:hover': {
-              backgroundColor: 'primary.main',
-              opacity: [0.9, 0.8, 0.7],
-            },
           }}>
-            <Grid container spacing={2} height={"200px"}>
-              <Grid item xs={8} sx={{backgroundColor:"warning.main"}}>
-                <Typography sx={{textAlign:"center"}}>item1</Typography>
+            <Grid container  height={"200px"}>
+              <Grid item xs={0} sm={0} md={3} lg={3} xl={4} sx={{ backgroundColor: "warning.main" }}>
+                <Typography sx={{ textAlign: "center" }}>item1</Typography>
               </Grid>
-              <Grid item xs={4} sx={{backgroundColor:"error.main"}}>
-                <Typography sx={{textAlign:"center"}}>item2</Typography>
+              <Grid item xs={12} sm={12} md={9} lg={9} xl={8} sx={{ backgroundColor: "error.main" }}>
+                <Typography sx={{ textAlign: "center" }}>item2</Typography>
               </Grid>
             </Grid>
           </Box>
