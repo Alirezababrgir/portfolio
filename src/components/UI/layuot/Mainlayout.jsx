@@ -31,10 +31,10 @@ const MainLayout = ({ children }) => {
             textAlign:"center",
             alignItems:"center"
           }}>
-            <Grid container height={"200px"}>
+            <Grid container>
               <Sidebar />
-              <Grid item xs={12} sm={12} md={9} lg={9} xl={8} sx={{ backgroundColor: "error.main" }}>
-                <Typography sx={{ textAlign: "center" }}>item2</Typography>
+              <Grid item xs={12} sm={12} md={9} sx={{ backgroundColor: "error.main" }}>
+                <Typography variant='"h1' sx={{ textAlign: "center" }}>item2</Typography>
               </Grid>
               {children}
             </Grid>
