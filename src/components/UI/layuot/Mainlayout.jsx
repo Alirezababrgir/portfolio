@@ -33,7 +33,7 @@ const MainLayout = ({ children }) => {
           }}>
             <Grid container>
               <Sidebar />
-              <Grid item xs={12} sm={12} md={9} sx={{ backgroundColor: "error.main" }}>
+              <Grid item xs={12} sm={12} md={9}>
                 <Typography variant='"h1' sx={{ textAlign: "center" }}>item2</Typography>
               </Grid>
               {children}

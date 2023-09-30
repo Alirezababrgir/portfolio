@@ -3,8 +3,8 @@ import { blue, red } from "@mui/material/colors";
 const Theme = createTheme({
   palette: {
     mode: 'light',
-    primary: {
-      main: '#7986cb',
+    gray: {
+      main: '#424242',
     },
     direction: 'rtl',
     typography: 'Vazir,Roboto',
