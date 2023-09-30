@@ -5,14 +5,14 @@ import Mcontent from './components/maincontent';
 import { useState } from 'react';
 
 function App() {
-  const [value,setValue]=useState(0);
-  
+  const [value, setValue] = useState(0);
+
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+      setValue(newValue);
   };
   return (
     <MainLayout>
-      <Sidebar value={value} handlechange={handleChange}/>
+      <Sidebar value={value} handleChange={handleChange}/>
       <Mcontent />
     </MainLayout>
   );

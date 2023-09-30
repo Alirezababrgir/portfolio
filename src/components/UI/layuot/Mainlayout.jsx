@@ -6,7 +6,6 @@ import { prefixer } from 'stylis';
 import { ThemeProvider } from '@mui/material/styles';
 import Theme from '../theme';
 import Box from '@mui/material/Box';
-import Appbar from '../Appbar'
 import Grid from '@mui/material/Unstable_Grid2';
 const cacheRtl = createCache({
   key: 'muirtl',
@@ -22,8 +21,6 @@ const MainLayout = ({ children }) => {
           <Helmet>
             <title>بیوگرافی من | صفحه اصلی</title>
           </Helmet>
-          <Appbar />
-          <div style={{ marginTop: 64 }} />
           <Box sx={{
             justifyContent:"center",
             textAlign:"center",
