@@ -8,9 +8,15 @@ import Groups2RoundedIcon from '@mui/icons-material/Groups2Rounded';
 import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 import TextSnippetRoundedIcon from '@mui/icons-material/TextSnippetRounded';
 import CopyrightIcon from '@mui/icons-material/Copyright';
-const Sidebar = () => {
+
+const Sidebar = ({value,handleChange}) => {
+    const tabProps = (index) => {
+        return {
+            id: `sidebar-tab-${index}`,
+            "aria-controls": `tabpanel-${index}`,
+        }};
     return (
-        <Grid id="Gr"item md={3} sx={{ backgroundColor: "gray.main", padding: "2rem", display: { xs: "none", md: "block" } }} color={grey[200]}>
+        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "2rem", display: { xs: "none", md: "block" } }} color={grey[200]}>
             <Avatar sx={{ width: "150px", height: "150px", margin: "0 auto", display: { xs: "none", md: "block" } }} variant="circular" src='https://toplearn.com/img/user/250x259/2402cc6d-1d17-6a22-e6cc-39e3248f13a4_%D8%A7%DB%8C%D9%85%D8%A7%D9%86_%D9%85%D8%AF%D8%A7%D8%A6%D9%86%DB%8C9.jpg' />
             <Divider variant="middle" sx={{ mt: 4, mb: 2, color: "white" }} color={grey[600]} />
             <Typography variant="caption" sx={{ textAlign: "center" }} color={grey[500]}> توسعه دهنده فول استک وب  </Typography>

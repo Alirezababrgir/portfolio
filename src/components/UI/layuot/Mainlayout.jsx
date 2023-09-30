@@ -5,11 +5,9 @@ import createCache from '@emotion/cache';
 import { prefixer } from 'stylis';
 import { ThemeProvider } from '@mui/material/styles';
 import Theme from '../theme';
-import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Appbar from '../Appbar'
 import Grid from '@mui/material/Unstable_Grid2';
-import Sidebar from '../Sidebar';
 const cacheRtl = createCache({
   key: 'muirtl',
   stylisPlugins: [prefixer, rtlPlugin],
@@ -32,10 +30,6 @@ const MainLayout = ({ children }) => {
             alignItems:"center"
           }}>
             <Grid container>
-              <Sidebar />
-              <Grid item xs={12} sm={12} md={9}>
-                <Typography variant='"h1' sx={{ textAlign: "center" }}>item2</Typography>
-              </Grid>
               {children}
             </Grid>
           </Box>
