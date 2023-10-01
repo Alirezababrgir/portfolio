@@ -4,15 +4,29 @@ import Sidebar from './components/UI/Sidebar';
 import Mcontent from './components/maincontent';
 import { useState } from 'react';
 import Tabpanel from './components/tabs/Tabpanel';
+import { Drawer } from '@mui/material';
+
 function App() {
   const [value, setValue] = useState(0);
-
+  const [draweropen, setdraweropen] = useState(false)
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
     <MainLayout>
       <Sidebar value={value} handleChange={handleChange} />
+      <Drawer
+        open={draweropen}
+        variant="temporary"
+        onClose={setdraweropen}
+        sx={{
+          "& .MuiPaper-root": {
+            width: 400
+          }
+        }}
+      >
+        <Sidebar value={value} handleChange={handleChange} />
+      </Drawer>
       <Mcontent>
         <Tabpanel value={value} index={0}>
           home
