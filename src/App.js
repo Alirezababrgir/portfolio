@@ -7,8 +7,8 @@ import { useState } from 'react';
 import Tabpanel from './components/tabs/Tabpanel';
 import { Drawer } from '@mui/material';
 import Fab from '@mui/material/Fab';
-import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import { Box } from '@mui/material';
+import FormatListBulletedRoundedIcon from '@mui/icons-material/FormatListBulletedRounded';
 
 function App() {
   const [value, setValue] = useState(0);
@@ -19,15 +19,15 @@ function App() {
   };
 
   const handlechangetoggle = () => {
-    setdraweropen (draweropen=>!draweropen);
+    setdraweropen(draweropen => !draweropen);
   }
 
 
   return (
     <MainLayout>
-       <Box sx={{display:{xs:"block",md:"none"},m:2}}>
-        <Fab onClick={handlechangetoggle} variant="extended" color='primary' size="large" aria-label='sidebar'>
-          <DensityMediumIcon />
+      <Box sx={{ display: { xs: "block", md: "none" }, m: 2 }}>
+        <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary'>
+          <FormatListBulletedRoundedIcon />
         </Fab>
       </Box>
       <Sidebar value={value} handleChange={handleChange} />
@@ -36,13 +36,14 @@ function App() {
         variant="temporary"
         onClose={setdraweropen}
         anchor="left"
+        transitionDuration={700}
         sx={{
           "& .MuiPaper-root": {
-            width: 300
-          },display:{xs:"block",md:"none"}
+            width: 250
+          }, display: { xs: "block", md: "none" }
         }}
       >
-        <Sidebardrawer value={value} handleChange={handleChange} handlechangetoggle={handlechangetoggle}/>
+        <Sidebardrawer value={value} handleChange={handleChange} handlechangetoggle={handlechangetoggle} />
       </Drawer>
       <Mcontent>
         <Tabpanel value={value} index={0}>
