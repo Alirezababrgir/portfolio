@@ -1,7 +1,7 @@
 import './App.css';
 import MainLayout from './layuot/Mainlayout';
-import Sidebar from './components/Sidebar';
-import Sidebardrawer from './components/Sidebardrawer';
+import Sidebar from './components/sidebar/Sidebar';
+import Sidebardrawer from './components/sidebar/Sidebardrawer';
 import Mcontent from './components/maincontent';
 import { useState } from 'react';
 import Tabpanel from './components/Tabpanel';
