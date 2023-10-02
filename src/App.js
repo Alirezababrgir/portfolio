@@ -1,10 +1,10 @@
 import './App.css';
-import MainLayout from './components/UI/layuot/Mainlayout';
-import Sidebar from './components/UI/Sidebar';
-import Sidebardrawer from './components/UI/Sidebardrawer';
+import MainLayout from './layuot/Mainlayout';
+import Sidebar from './components/Sidebar';
+import Sidebardrawer from './components/Sidebardrawer';
 import Mcontent from './components/maincontent';
 import { useState } from 'react';
-import Tabpanel from './components/tabs/Tabpanel';
+import Tabpanel from './components/Tabpanel';
 import { Drawer } from '@mui/material';
 import Fab from '@mui/material/Fab';
 import { Box } from '@mui/material';

@@ -4,7 +4,7 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { prefixer } from 'stylis';
 import { ThemeProvider } from '@mui/material/styles';
-import Theme from '../theme';
+import Theme from './theme';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 const cacheRtl = createCache({
