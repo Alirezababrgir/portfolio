@@ -36,14 +36,15 @@ function App() {
         variant="temporary"
         onClose={setdraweropen}
         anchor="left"
-        transitionDuration={700}
+        transitionDuration={200}
         sx={{
           "& .MuiPaper-root": {
             width: 250
-          }, display: { xs: "block", md: "none" }
+          }, display: { xs: "block", md: "none" },          
+
         }}
       >
-        <Sidebardrawer value={value} handleChange={handleChange} handlechangetoggle={handlechangetoggle} />
+        <Sidebardrawer value={value} handleChange={handleChange} handlechangetoggle={handlechangetoggle} setdraweropen={setdraweropen}/>
       </Drawer>
       <Mcontent>
         <Tabpanel value={value} index={0}>
