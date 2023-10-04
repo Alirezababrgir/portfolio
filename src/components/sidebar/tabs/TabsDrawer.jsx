@@ -18,13 +18,22 @@ const TabsDrawer = ({ handleChange }) => {
             "aria-controls": `tabpanel-${index}`,
         }
     };
+
+    const tabs = [
+        { label: "خانه", icon: <HomeRoundedIcon />, ...tabProps(0) },
+        { label: "رزومه ", icon: <TextSnippetRoundedIcon />, ...tabProps(1) },
+        { label: "نمونه کارها", icon: <TerminalRoundedIcon />, ...tabProps(2) },
+        { label: "درباره من", icon: <Groups2RoundedIcon />, ...tabProps(3) },
+        { label: " ارتباط با من", icon: <PowerRoundedIcon />, ...tabProps(4) }
+    ];
+
+
     return (
+
         <Tabs onChange={handleChange} value={value} aria-label="icon label tabs example" orientation="vertical" allowScrollButtonsMobile scrollButtons="auto">
-            <Tab icon={<HomeRoundedIcon />} iconPosition='start' label="خانه" sx={{ "&.MuiTab-root": { minHeight: 40 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} onClick={() => setdraweropen(false)}{...tabProps(0)} />
-            <Tab icon={<TextSnippetRoundedIcon />} iconPosition='start' label="رزومه  " sx={{ "&.MuiTab-root": { minHeight: 40 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} onClick={() => setdraweropen(false)}{...tabProps(1)} />
-            <Tab icon={<TerminalRoundedIcon />} iconPosition='start' label="نمونه کارها" sx={{ "&.MuiTab-root": { minHeight: 40 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} onClick={() => setdraweropen(false)}{...tabProps(2)} />
-            <Tab icon={<Groups2RoundedIcon />} iconPosition='start' label="درباره من" sx={{ "&.MuiTab-root": { minHeight: 40 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} onClick={() => setdraweropen(false)}{...tabProps(3)} />
-            <Tab icon={<PowerRoundedIcon />} iconPosition='start' label=" ارتباط با من" sx={{ "&.MuiTab-root": { minHeight: 40 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} onClick={() => setdraweropen(false)}{...tabProps(4)} />
+            {tabs.map((tab, index) => (
+                <Tab key={index} icon={tab.icon} iconPosition='start' label={tab.label} sx={{ "&.MuiTab-root": { minHeight: 40 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} onClick={() => setdraweropen(false)}{...tab} />
+            ))}
         </Tabs>
     )
 }
