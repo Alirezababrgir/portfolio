@@ -1,6 +1,10 @@
 import { Box, Typography } from "@mui/material";
+import { useContext } from "react";
+import MYcontext from "../context/context"
+const Tabpanel = ({ children, index, ...others }) => {
+  
+  const {value}=useContext(MYcontext);
 
-const Tabpanel = ({ children, index, value, ...others }) => {
     return (
         <div
         id={`sidebar-tab-${index}`}

@@ -5,8 +5,13 @@ import Groups2RoundedIcon from '@mui/icons-material/Groups2Rounded';
 import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 import TextSnippetRoundedIcon from '@mui/icons-material/TextSnippetRounded';
 import PowerRoundedIcon from '@mui/icons-material/PowerRounded';
+import { useContext } from 'react';
+import MYcontext from '../../../context/context';
 
-const TabsDrawer = ({setdraweropen, handleChange, value}) => {
+const TabsDrawer = ({ handleChange }) => {
+
+    const { value, setdraweropen } = useContext(MYcontext);
+
     const tabProps = (index) => {
         return {
             id: `sidebar-tab-${index}`,
