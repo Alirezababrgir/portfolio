@@ -6,7 +6,13 @@ import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 import TextSnippetRoundedIcon from '@mui/icons-material/TextSnippetRounded';
 import PowerRoundedIcon from '@mui/icons-material/PowerRounded';
 
-const TabsDrawer = ({setdraweropen, handleChange, value,tabProps }) => {
+const TabsDrawer = ({setdraweropen, handleChange, value}) => {
+    const tabProps = (index) => {
+        return {
+            id: `sidebar-tab-${index}`,
+            "aria-controls": `tabpanel-${index}`,
+        }
+    };
     return (
         <Tabs onChange={handleChange} value={value} aria-label="icon label tabs example" orientation="vertical" allowScrollButtonsMobile scrollButtons="auto">
             <Tab icon={<HomeRoundedIcon />} iconPosition='start' label="خانه" sx={{ "&.MuiTab-root": { minHeight: 40 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} onClick={() => setdraweropen(false)}{...tabProps(0)} />

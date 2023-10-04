@@ -9,12 +9,6 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 
 
 const Sidebardrawer = ({ value, handleChange, handlechangetoggle, setdraweropen }) => {
-    const tabProps = (index) => {
-        return {
-            id: `sidebar-tab-${index}`,
-            "aria-controls": `tabpanel-${index}`,
-        }
-    };
 
     return (
         <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "1rem", borderRight: `4px solid #777` }} color={grey[100]}>
@@ -27,7 +21,7 @@ const Sidebardrawer = ({ value, handleChange, handlechangetoggle, setdraweropen 
             <Divider variant="middle" sx={{ mt: 2, mb: 1, color: "white" }} color={grey[600]} />
             <Typography variant="subtitle2" sx={{ textAlign: "center" }} color={grey[500]}>توسعه دهنده فول استک وب</Typography>
             <Divider variant="middle" sx={{ mt: 1, mb: 1, color: "white" }} color={grey[600]} />
-            <TabsDrawer value={value} handleChange={handleChange} setdraweropen={setdraweropen} tabProps={tabProps} />
+            <TabsDrawer value={value} handleChange={handleChange} setdraweropen={setdraweropen}/>
             <Divider variant="middle" sx={{ mt: 1, mb: 1, color: "white" }} color={grey[600]} />
             <Typography variant="subtitle2" sx={{ textAlign: "center" }} color={grey[700]}>توسعه یافته توسط zakhar <CopyrightIcon sx={{ color: grey[500] }} /> </Typography>
         </Grid>
