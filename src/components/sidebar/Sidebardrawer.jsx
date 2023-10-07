@@ -11,7 +11,7 @@ const Sidebardrawer = ({ handleChange, handlechangetoggle}) => {
 
 
     return (
-        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "1rem", borderRight: `4px solid #777` }} color={grey[100]}>
+        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main",padding:"0.5rem",height:"1000px", borderRight: `4px solid #777`,overflow:"auto"}} color={grey[100]}>
             <Box sx={{ display: { xs: "block", md: "none" }, m: 0.2 }}>
                 <Fab onClick={handlechangetoggle} variant="circular" color='primary' size="small" aria-label='sidebar'>
                     <KeyboardDoubleArrowLeftRoundedIcon />

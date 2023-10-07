@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useContext } from "react";
 import MYcontext from "../context/context"
 const Tabpanel = ({ children, index, ...others }) => {
@@ -13,10 +13,8 @@ const Tabpanel = ({ children, index, ...others }) => {
         {...others}
         >
           {value===index &&(
-          <Box sx={{p:3}}>
-            <Typography>
+          <Box>
             {children}
-            </Typography>
           </Box>
           )}
         </div>

@@ -5,7 +5,7 @@ import Sidebardrawer from './components/sidebar/Sidebardrawer';
 import Mcontent from './components/maincontent';
 import { useState } from 'react';
 import Tabpanel from './components/Tabpanel';
-import { Drawer } from '@mui/material';
+import { Drawer, Typography } from '@mui/material';
 import Fab from '@mui/material/Fab';
 import { Box } from '@mui/material';
 import FormatListBulletedRoundedIcon from '@mui/icons-material/FormatListBulletedRounded';
@@ -26,7 +26,7 @@ function App() {
   return (
     <MYcontext.Provider value={{ value, setValue, draweropen, setdraweropen }}>
       <MainLayout>
-        <Box sx={{ display: { xs: "block", md: "none" }, m: 2 }}>
+        <Box sx={{ display: { xs: "block", md: "none" },position:"absolute"}}>
           <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary'>
             <FormatListBulletedRoundedIcon />
           </Fab>
@@ -48,7 +48,11 @@ function App() {
         </Drawer>
         <Mcontent>
           <Tabpanel index={0}>
-            home
+            <Box sx={{height:"140vh", backgroundImage: `url(${require("./assetes/Black-And-Grey-Wallpaper-HD-Desktop.jpg")})`, backgroundRepeat: "no-repeat", backgroundSize:"cover",opacity:"40%"}}>
+            <Typography sx={{ color: "whitesmoke" }}>
+              home
+            </Typography>
+            </Box>
           </Tabpanel>
           <Tabpanel index={1}>
             1
