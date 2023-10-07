@@ -28,7 +28,7 @@ function App() {
     <MYcontext.Provider value={{ value, setValue, draweropen, setdraweropen }}>
       <MainLayout>
         <Box sx={{ display: { xs: "block", md: "none" },position:"absolute"}}>
-          <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary'>
+          <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary' sx={{m:3.5}}>
             <FormatListBulletedRoundedIcon />
           </Fab>
         </Box>
