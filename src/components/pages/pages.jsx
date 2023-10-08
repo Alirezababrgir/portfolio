@@ -3,17 +3,17 @@ import theme from "../../layuot/theme"
 import { Box } from '@mui/material';
 import Tabpanel from '../Tabpanel';
 import Homepage from './homepage';
-
+import About from './aboutpage';
 const Pages = ({ handleChange, value }) => {
   return (
     <SwipeableViews index={value} onChangeIndex={handleChange} axis={theme.direction === 'ltr' ? 'x-reverse' : 'x'}>
       <Tabpanel index={0}>
-        <Box sx={{ height: "140vh", backgroundImage: `url(${require("../../assetes/Black-And-Grey-Wallpaper-HD-Desktop.jpg")})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", opacity: "80%" }}>
+        <Box sx={{ height: "140vh", backgroundImage: `url(${require("../../assetes/Black-And-Grey-Wallpaper-HD-Desktop.jpg")})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", opacity: "70%" }}>
           <Homepage />
         </Box>
       </Tabpanel>
       <Tabpanel index={1}>
-        <Box sx={{ height: "140vh", backgroundImage: `url(${require("../../assetes/Black-And-Grey-Wallpaper-HD-Desktop.jpg")})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", opacity: "60%" }}>
+        <Box sx={{ height: "140vh", backgroundImage: `url(${require("../../assetes/Black-And-Grey-Wallpaper-HD-Desktop.jpg")})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", opacity: "70%" }}>
           1
         </Box>
       </Tabpanel>
@@ -23,8 +23,8 @@ const Pages = ({ handleChange, value }) => {
         </Box>
       </Tabpanel>
       <Tabpanel index={3}>
-        <Box sx={{ height: "140vh", backgroundImage: `url(${require("../../assetes/Black-And-Grey-Wallpaper-HD-Desktop.jpg")})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", opacity: "60%" }}>
-          3
+        <Box sx={{ height: "140vh", backgroundImage: `url(${require("../../assetes/Black-And-Grey-Wallpaper-HD-Desktop.jpg")})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", opacity: "70%" }}>
+          <About/>
         </Box>
       </Tabpanel>
       <Tabpanel index={4}>
