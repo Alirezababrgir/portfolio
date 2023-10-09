@@ -27,10 +27,10 @@ const Homepage = () => {
         <>
             <Box sx={{ p: 2 }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
-                <Typography sx={{ color: "#2196f3" }}>صفحه اول</Typography>
+                <Typography sx={{ color: "#2196f3"}}>صفحه اول</Typography>
                 <Divider variant="middle" sx={{ mt: 2, mb: 4 }} color={blue[500]} />
             </Box>
-            <Box sx={{ backgroundColor: "silver", height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
+            <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
                 <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
                 <Typed
                     strings={[':) سلام من  عیرضا ببرگیر هستم']}

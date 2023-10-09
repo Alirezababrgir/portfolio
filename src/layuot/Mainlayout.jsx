@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => {
           <Box sx={{
             justifyContent:"center",
             textAlign:"center",
-            alignItems:"center"
+            alignItems:"center",
           }}>
             <Grid container>
               {children}

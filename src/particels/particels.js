@@ -20,9 +20,9 @@ export const Part1 ={
       color: { value: "#1976D2" },
       line_linked: {
         color: "#ffffff",
-        distance: 10,
+        distance: 100,
         enable: true,
-        opacity: 0,
+        opacity: 1,
         width: 1
       },
       move: {
@@ -35,9 +35,9 @@ export const Part1 ={
         speed: 0.5,
         straight: false
       },
-      number: { density: { enable: true, value_area: 800 }, value: 80 },
+      number: { density: { enable: true, value_area: 800 }, value: 50 },
       opacity: {
-        anim: { enable: false, opacity_min: 0.1, speed: 1, sync: false },
+        anim: { enable: false, opacity_min: 0.1, speed: 2, sync: false },
         random: false,
         value: 0.5
       },
