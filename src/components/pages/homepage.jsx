@@ -1,7 +1,6 @@
 import { Divider } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
-import { blue } from "@mui/material/colors";
 import Typed from 'react-typed';
 import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import { useCallback } from "react";
@@ -28,9 +27,11 @@ const Homepage = () => {
             <Box sx={{ p: 2 }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
                 <Typography sx={{ color: "#2196f3"}}>صفحه اول</Typography>
-                <Divider variant="middle" sx={{ mt: 2, mb: 4 }} color={blue[500]} />
+                <Divider variant="middle" sx={{ mt: 1, mb: 0.5}} color={"#099CDF"} />
+                <Divider variant="middle"  color={"#099CDF"} />
+
             </Box>
-            <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
+            <Box sx={{ backgroundColor:"#9999",height: "40%", width: "60%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center",mt:8 }}>
                 <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
                 <Typed
                     strings={[':) سلام من  عیرضا ببرگیر هستم']}

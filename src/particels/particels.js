@@ -17,7 +17,7 @@ export const Part1 ={
       }
     },
     particles: {
-      color: { value: "#1976D2" },
+      color: { value: "#3783CE" },
       line_linked: {
         color: "#ffffff",
         distance: 100,
@@ -35,7 +35,7 @@ export const Part1 ={
         speed: 0.5,
         straight: false
       },
-      number: { density: { enable: true, value_area: 800 }, value: 50 },
+      number: { density: { enable: true, value_area: 800 }, value: 80 },
       opacity: {
         anim: { enable: false, opacity_min: 0.1, speed: 2, sync: false },
         random: false,

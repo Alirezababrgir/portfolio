@@ -12,7 +12,7 @@ const About = () => {
                 <Divider variant="middle" sx={{ mt: 2, mb: 4 }} color={blue[500]} />
             </Box>
             <Box sx={{height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection:"row-reverse", alignItems: "center",flexWrap:"wrap"}}>
-                <Card sx={{ maxWidth: 345,p:2, mx: 4,my:2, backgroundColor: "silver",borderRadius:"1rem" }}>
+                <Card sx={{ maxWidth: 345,p:2, mx: 4,my:2, backgroundColor: "#9999",borderRadius:"1rem" }}>
                     <CardActionArea>
                         <CardMedia
                         sx={{borderRadius:"2rem"}}
@@ -37,7 +37,7 @@ const About = () => {
                         </CardContent>
                     </CardActionArea>
                 </Card>
-                <Card sx={{ maxWidth: 345,p:2, mx: 4,my:2, backgroundColor: "silver",borderRadius:"1rem" }}>
+                <Card sx={{ maxWidth: 345,p:2, mx: 4,my:2, backgroundColor: "#9999",borderRadius:"1rem" }}>
                     <CardActionArea>
                         <CardMedia
                         sx={{borderRadius:"2rem"}}
@@ -62,7 +62,7 @@ const About = () => {
                         </CardContent>
                     </CardActionArea>
                 </Card>
-                <Card sx={{ maxWidth: 345,p:2, mx: 4, my:2,backgroundColor: "silver",borderRadius:"1rem" }}>
+                <Card sx={{ maxWidth: 345,p:2, mx: 4, my:2,backgroundColor: "#9999",borderRadius:"1rem" }}>
                     <CardActionArea>
                         <CardMedia
                         sx={{borderRadius:"2rem"}}
