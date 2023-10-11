@@ -1,13 +1,12 @@
-import * as React from 'react';
 import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
-function CircularProgressWithLabel(props) {
+import { useEffect, useState } from 'react';
+export const CircularProgressWithLabel = (prop) => {
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" {...props} />
+      <CircularProgress variant="determinate" {...prop} color='primary'/>
       <Box
         sx={{
           top: 0,
@@ -17,11 +16,11 @@ function CircularProgressWithLabel(props) {
           position: 'absolute',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'center'
         }}
       >
         <Typography variant="caption" component="div" color="text.secondary">
-          {`${Math.round(props.value)}%`}
+          {`${Math.round(prop.value)}%`}
         </Typography>
       </Box>
     </Box>
@@ -29,25 +28,21 @@ function CircularProgressWithLabel(props) {
 }
 
 CircularProgressWithLabel.propTypes = {
-  /**
-   * The value of the progress indicator for the determinate variant.
-   * Value between 0 and 100.
-   * @default 0
-   */
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularWithValueLabel() {
-  const [progress, setProgress] = React.useState(1);
+export const CircularWithValueLabel = ({ value }) => {
+  const [progress, setProgress] = useState(10);
 
- const timer= React.useEffect(() => {
-     setTimeout(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 1));
-    },100);
-return () => {
-    clearInterval(timer);
-  };
-}, [progress]);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => (prevProgress >= value ? value : prevProgress + 5));
+    }, 200);
+    console.log(progress)
+    return () => {
+      clearInterval(timer);
+    };
+  });
 
-  return <CircularProgressWithLabel value={progress} />;
-}  
+  return <CircularProgressWithLabel value={progress}/>;
+}
