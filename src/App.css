@@ -10,6 +10,11 @@ body{
   background-repeat: no-repeat;
   background-size:cover;
   padding: 0%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.MuiBox-root::-webkit-scrollbar{
+  display: none;
 }
 
 .App {

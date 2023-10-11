@@ -14,7 +14,7 @@ const About = () => {
             <Box sx={{ p: 3 }}>
                 <Divider variant="middle" sx={{ mt: 2, mb: 2, "&::before,&::after": { borderColor: "black" } }}><Typography sx={{ color: "black" }}>درباره من </Typography></Divider>
             </Box>
-            <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
+            <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap",overflow:"scroll"}}>
                 <Card sx={{ maxWidth: 500,width:380,height:560, p: 1, mx: 4, my: 2, backgroundColor: "#9999", borderRadius: "0.5rem" }}>
                     <CardActionArea>
                         <CardMedia
