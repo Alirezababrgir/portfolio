@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 export const CircularProgressWithLabel = (prop) => {
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" {...prop} color='primary'/>
+      <CircularProgress variant="determinate" {...prop} color={prop.c} sx={{opacity:"60%"}}/>
       <Box
         sx={{
           top: 0,
@@ -31,7 +31,7 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export const CircularWithValueLabel = ({ value }) => {
+export const CircularWithValueLabel = ({ value,c }) => {
   const [progress, setProgress] = useState(10);
 
   useEffect(() => {
@@ -44,5 +44,5 @@ export const CircularWithValueLabel = ({ value }) => {
     };
   });
 
-  return <CircularProgressWithLabel value={progress}/>;
+  return <CircularProgressWithLabel value={progress} c={c}/>;
 }
