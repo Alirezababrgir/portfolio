@@ -7,7 +7,6 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { Part1 } from "../../particels/particels";
-import WavingHandRoundedIcon from '@mui/icons-material/WavingHandRounded';
 import TextTransition, { presets } from 'react-text-transition';
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -46,7 +45,7 @@ const Homepage = () => {
             </Helmet>
             <Box sx={{ p: 3 }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 2, "&::before,&::after": { borderColor: "black" } }}><Typography sx={{ color: "black" }}>سلام <WavingHandRoundedIcon sx={{ fontSize: "larger" }} /> </Typography></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 2, "&::before,&::after": { borderColor: "black" } }}><Typography sx={{ color: "black" }}>سلام </Typography></Divider>
             </Box>
             <Box sx={{ backgroundColor: "#2222", height: "40%", width: "60%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", mt: 8 }}>
                 <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
