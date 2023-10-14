@@ -6,12 +6,16 @@ import Fab from '@mui/material/Fab';
 import { Box } from '@mui/material';
 import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
 import CopyrightIcon from '@mui/icons-material/Copyright';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const Sidebardrawer = ({ handleChange, handlechangetoggle}) => {
+const Sidebardrawer = ({ handleChange, handlechangetoggle }) => {
 
 
     return (
-        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main",padding:"0.5rem",height:"1000px", borderRight: `4px solid #777`,overflow:"auto"}} color={grey[100]}>
+        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "1000px", borderRight: `4px solid #777`, overflow: "auto" }} color={grey[100]}>
             <Box sx={{ display: { xs: "block", md: "none" }, m: 0.2 }}>
                 <Fab onClick={handlechangetoggle} variant="circular" color='primary' size="small" aria-label='sidebar'>
                     <KeyboardDoubleArrowLeftRoundedIcon />
@@ -23,6 +27,21 @@ const Sidebardrawer = ({ handleChange, handlechangetoggle}) => {
             <Divider variant="middle" sx={{ mt: 1, mb: 1, color: "white" }} color={grey[600]} />
             <TabsDrawer handleChange={handleChange} />
             <Divider variant="middle" sx={{ mt: 1, mb: 1, color: "white" }} color={grey[600]} />
+            <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                <a href='https://www.babrgiralireza@gmail.com' rel="noreferrer noopener" target="_blank" >
+                    <EmailIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
+                </a>
+                <a href='https://www.github.com/alirezababrgir' rel="noreferrer noopener" target="_blank" >
+                    <GitHubIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
+                </a>
+                <a href='https://www.instagram.com/__zakhar___/' rel="noreferrer noopener" target="_blank" >
+                    <InstagramIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
+                </a>
+                <a href='https://www.likedin.com/alirezababrgir' rel="noreferrer noopener" target="_blank" >
+                    <LinkedInIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
+                </a>
+            </Box>
+            <Divider variant="middle" sx={{ mt: 0.5, mb: 1, color: "white" }} color={grey[600]} />
             <Typography variant="subtitle2" sx={{ textAlign: "center" }} color={grey[700]}>توسعه یافته توسط zakhar <CopyrightIcon sx={{ color: grey[500] }} /> </Typography>
         </Grid>
     )

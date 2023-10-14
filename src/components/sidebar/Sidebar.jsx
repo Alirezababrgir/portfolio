@@ -21,16 +21,16 @@ const Sidebar = ({ handleChange }) => {
             <Divider variant="middle" sx={{ mt: 2, mb: 1, color: "white" }} color={grey[600]} />
             <Box sx={{ m: 0 }}>
                 <a href='https://www.babrgiralireza@gmail.com' rel="noreferrer noopener" target="_blank" >
-                    <EmailIcon sx={{ color: "grey", mx: 1 }} />
+                    <EmailIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
                 </a>
                 <a href='https://www.github.com/alirezababrgir' rel="noreferrer noopener" target="_blank" >
-                    <GitHubIcon sx={{ color: "grey", mx: 1 }} />
+                    <GitHubIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
                 </a>
                 <a href='https://www.instagram.com/__zakhar___/' rel="noreferrer noopener" target="_blank" >
-                    <InstagramIcon sx={{ color: "grey", mx: 1 }} />
+                    <InstagramIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
                 </a>
                 <a href='https://www.likedin.com/alirezababrgir' rel="noreferrer noopener" target="_blank" >
-                    <LinkedInIcon sx={{ color: "grey", mx: 1 }} />
+                    <LinkedInIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
                 </a>
             </Box>
             <Divider variant="middle" sx={{ mt: 0.5, mb: 1, color: "white" }} color={grey[600]} />
