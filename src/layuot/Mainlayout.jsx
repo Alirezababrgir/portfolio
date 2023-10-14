@@ -1,4 +1,4 @@
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
@@ -18,9 +18,7 @@ const MainLayout = ({ children }) => {
     <CacheProvider value={cacheRtl}>
       <ThemeProvider theme={Theme}>
         <HelmetProvider>
-          <Helmet>
-            <title>بیوگرافی من | صفحه اصلی</title>
-          </Helmet>
+          
           <Box sx={{
             justifyContent:"center",
             textAlign:"center",

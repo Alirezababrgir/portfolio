@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import { CircularWithValueLabel } from "./progressbar";
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
+import { Helmet } from "react-helmet-async";
 
 
 const About = () => {
@@ -12,6 +13,9 @@ const About = () => {
 
     return (
         <>
+            <Helmet>
+                <title>بیوگرافی من | درباره من </title>
+            </Helmet>
             <Box sx={{ p: 3 }}>
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 2, "&::before,&::after": { borderColor: "black" } }}><Typography sx={{ color: "black" }}>درباره من <PersonSearchIcon sx={{ fontSize: "larger" }} /></Typography></Divider>
             </Box>

@@ -10,6 +10,7 @@ import { Part1 } from "../../particels/particels";
 import WavingHandRoundedIcon from '@mui/icons-material/WavingHandRounded';
 import TextTransition, { presets } from 'react-text-transition';
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Homepage = () => {
 
@@ -40,6 +41,9 @@ const Homepage = () => {
     return (
 
         <>
+            <Helmet>
+                <title>بیوگرافی من | صفحه اصلی</title>
+            </Helmet>
             <Box sx={{ p: 3 }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 2, "&::before,&::after": { borderColor: "black" } }}><Typography sx={{ color: "black" }}>سلام <WavingHandRoundedIcon sx={{ fontSize: "larger" }} /> </Typography></Divider>
@@ -53,8 +57,8 @@ const Homepage = () => {
                 <br />
                 <Box sx={{ display: "flex" }}>
                     <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
-                    <Typography sx={{ mx: 0.6}}>
-                        من 
+                    <Typography sx={{ mx: 0.6 }}>
+                        من
                     </Typography>
                 </Box>
             </Box>
