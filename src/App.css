@@ -1,25 +1,27 @@
-*{
-  font-family: "Vazir","Roboto" !important;
+* {
+  font-family: "Vazir", "Roboto" !important;
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
 
 }
-body{
+
+body {
   background-image: url(./assetes/wp12749560-grey-macbook-wallpapers.jpg);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   padding: 0%;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.MuiBox-root::-webkit-scrollbar{
+
+.MuiBox-root::-webkit-scrollbar {
   display: none;
 }
 
 .App {
   text-align: center;
-padding: 0;
+  padding: 0;
 }
 
 .App-logo {
