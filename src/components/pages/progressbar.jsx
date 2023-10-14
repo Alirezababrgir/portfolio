@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 export const CircularProgressWithLabel = (prop) => {
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" {...prop} color={prop.c} sx={{opacity:"60%"}}/>
+      <CircularProgress variant="determinate" {...prop} color={prop.c} sx={{opacity:"70%"}}/>
       <Box
         sx={{
           top: 0,

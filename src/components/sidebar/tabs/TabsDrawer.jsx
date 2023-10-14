@@ -18,12 +18,11 @@ const TabsDrawer = ({ handleChange }) => {
             "aria-controls": `tabpanel-${index}`,
         }
     };
-
     const tabs = [
         { label: "خانه", icon: <HomeRoundedIcon />, ...tabProps(0) },
-        { label: "رزومه ", icon: <TextSnippetRoundedIcon />, ...tabProps(1) },
+        { label: "درباره من", icon: <Groups2RoundedIcon />, ...tabProps(1) },
         { label: "نمونه کارها", icon: <TerminalRoundedIcon />, ...tabProps(2) },
-        { label: "درباره من", icon: <Groups2RoundedIcon />, ...tabProps(3) },
+        { label: "رزومه ", icon: <TextSnippetRoundedIcon />, ...tabProps(3)},
         { label: " ارتباط با من", icon: <PowerRoundedIcon />, ...tabProps(4) }
     ];
 

@@ -8,13 +8,13 @@ const Pages = ({ handleChange, value }) => {
   return (
     <SwipeableViews index={value} onChangeIndex={handleChange} axis={theme.direction === 'ltr' ? 'x-reverse' : 'x'}>
       <Tabpanel index={0}>
-        <Box sx={{ height: "140vh"}}>
+        <Box sx={{ height: "140vh" }}>
           <Homepage />
         </Box>
       </Tabpanel>
       <Tabpanel index={1}>
         <Box >
-          1
+          <About />
         </Box>
       </Tabpanel>
       <Tabpanel index={2}>
@@ -24,12 +24,12 @@ const Pages = ({ handleChange, value }) => {
       </Tabpanel>
       <Tabpanel index={3}>
         <Box>
-          <About/>
+          3
         </Box>
       </Tabpanel>
       <Tabpanel index={4}>
-      <Box>
-        4
+        <Box>
+          4
         </Box>
       </Tabpanel>
     </SwipeableViews>
