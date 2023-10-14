@@ -10,9 +10,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import {useMediaQuery} from '@mui/material';
+import Theme from '../../layuot/theme';
+import { useEffect } from 'react';
 
-const Sidebardrawer = ({ handleChange, handlechangetoggle }) => {
+const Sidebardrawer = ({ handleChange, handlechangetoggle, setdraweropen }) => {
 
+    const mdup = useMediaQuery(Theme.breakpoints.up("md"));
+    useEffect(() => {
+        if (mdup) {
+            setdraweropen(false);
+        }
+    }, [mdup]);
 
     return (
         <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "1000px", borderRight: `4px solid #777`, overflow: "auto" }} color={grey[100]}>
