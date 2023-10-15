@@ -38,7 +38,6 @@ export const CircularWithValueLabel = ({ value,c }) => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => (prevProgress >= value ? value : prevProgress + 5));
     }, 200);
-    console.log(progress)
     return () => {
       clearInterval(timer);
     };

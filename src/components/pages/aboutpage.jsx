@@ -42,7 +42,7 @@ const About = () => {
             <Box sx={{ p: 3 }}>
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Typography sx={{ color: "black" }}>مهارت ها</Typography></Divider>
             </Box>
-            <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap", overflow: "scroll" }}>
+            <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap"}}>
                 <Card sx={{ maxWidth: 800, width: 400, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                     <CardActionArea>
                         <CardContent>

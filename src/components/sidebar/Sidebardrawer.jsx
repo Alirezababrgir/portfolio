@@ -10,7 +10,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import {useMediaQuery} from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 import Theme from '../../layuot/theme';
 import { useEffect } from 'react';
 
@@ -24,7 +24,7 @@ const Sidebardrawer = ({ handleChange, handlechangetoggle, setdraweropen }) => {
     }, [mdup]);
 
     return (
-        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "1000px", borderRight: `4px solid #777`, overflow: "auto" }} color={grey[100]}>
+        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "100vh", overflowY: "auto" }} color={grey[100]}>
             <Box sx={{ display: { xs: "block", md: "none" }, m: 0.2 }}>
                 <Fab onClick={handlechangetoggle} variant="circular" color='primary' size="small" aria-label='sidebar'>
                     <KeyboardDoubleArrowLeftRoundedIcon />
