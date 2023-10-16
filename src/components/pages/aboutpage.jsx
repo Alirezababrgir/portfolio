@@ -19,7 +19,6 @@ import {
     SiBootstrap,
     SiTailwindcss,
     SiLinux,
-    SiVscodium,
     SiIntellijidea,
     SiMysql,
     SiNextdotjs,
@@ -37,7 +36,7 @@ const About = () => {
     return (
         <>
             <Helmet>
-                <title> علیرضا | مهارت من  </title>
+                <title> بیوگرافی من | مهارت من  </title>
             </Helmet>
             <Box sx={{ p: 3 }}>
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Typography sx={{ color: "black" }}>مهارت ها</Typography></Divider>

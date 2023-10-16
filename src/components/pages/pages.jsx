@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import Tabpanel from '../Tabpanel';
 import Homepage from './homepage';
 import About from './aboutpage';
+import Resoume from './resoumepage';
 const Pages = ({ handleChange, value }) => {
   return (
     <SwipeableViews index={value} onChangeIndex={handleChange} axis={theme.direction === 'ltr' ? 'x-reverse' : 'x'}>
@@ -24,7 +25,8 @@ const Pages = ({ handleChange, value }) => {
       </Tabpanel>
       <Tabpanel index={3}>
         <Box>
-          3
+        <Resoume/>
+
         </Box>
       </Tabpanel>
       <Tabpanel index={4}>
