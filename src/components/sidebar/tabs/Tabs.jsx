@@ -20,7 +20,7 @@ const TaBs = ({ handleChange }) => {
     };
     const tabs = [
         { label: "خانه", icon: <HomeRoundedIcon />, ...tabProps(0) },
-        { label: "درباره من", icon: <Groups2RoundedIcon />, ...tabProps(1) },
+        { label: " مهارت ها", icon: <Groups2RoundedIcon />, ...tabProps(1) },
         { label: "نمونه کارها", icon: <TerminalRoundedIcon />, ...tabProps(2) },
         { label: "رزومه ", icon: <TextSnippetRoundedIcon />, ...tabProps(3) },
         { label: " ارتباط با من", icon: <PowerRoundedIcon />, ...tabProps(4) }

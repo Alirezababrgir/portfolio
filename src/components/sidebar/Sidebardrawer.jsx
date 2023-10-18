@@ -24,7 +24,7 @@ const Sidebardrawer = ({ handleChange, handlechangetoggle, setdraweropen }) => {
     }, [mdup]);
 
     return (
-        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "100vh", overflowY: "auto" }} color={grey[100]}>
+        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "100vh", overflowY: "auto",overflowX:"hidden" }} color={grey[100]}>
             <Box sx={{ display: { xs: "block", md: "none" }, m: 0.2 }}>
                 <Fab onClick={handlechangetoggle} variant="circular" color='primary' size="small" aria-label='sidebar'>
                     <KeyboardDoubleArrowLeftRoundedIcon />

@@ -15,7 +15,7 @@ export const CircularProgressWithLabel = (prop) => {
   }, []);
 
   return (
-    <Slide direction="down" in={load} style={{ transitionDelay: load ? '1100ms' : '0ms' }}>
+    <Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}>
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
       <CircularProgress variant="determinate" {...prop} color={prop.c} sx={{opacity:"80%"}}/>
       <Box
@@ -44,12 +44,12 @@ CircularProgressWithLabel.propTypes = {
 };
 
 export const CircularWithValueLabel = ({ value,c }) => {
-  const [progress, setProgress] = useState(5);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= value ? value : prevProgress +1));
-    },7);
+      setProgress((prevProgress) => (prevProgress >= value ? value : prevProgress +5));
+    },200);
     return () => {
       clearInterval(timer);
     };

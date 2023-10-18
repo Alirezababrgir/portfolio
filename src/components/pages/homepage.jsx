@@ -57,7 +57,8 @@ const Homepage = () => {
                         <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 2, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '800ms' : '0ms' }}><Typography sx={{ color: "black" }}>سلام </Typography></Slide></Divider>
                 </Box>
                 <Zoom direction="up" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
-                    <Box sx={{ backgroundColor: "#2222", height: "40%", width: "60%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", mt: 8 }}>
+                    <Box sx={{ height: "100vh"}}>
+                        <Box sx={{ backgroundColor:"#2222",height: "60%", width:"60%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", mt: 8 }}>
                         <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
                         <Typed
                             strings={['( : سلام من علیرضا هستم']}
@@ -70,6 +71,7 @@ const Homepage = () => {
                                 من
                             </Typography>
                         </Box>
+                    </Box>
                     </Box>
                 </Zoom>
             </>

@@ -33,7 +33,7 @@ import {
 
 const About = () => {
 
-    
+
     const [load, setload] = useState(false);
     useEffect(() => {
         setload(true);      //Mount
@@ -49,11 +49,11 @@ const About = () => {
                 <title> بیوگرافی من | مهارت من  </title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '800ms' : '0ms' }}><Typography sx={{ color: "black" }}>مهارت ها</Typography></Slide></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography sx={{ color: "black" }}>مهارت ها</Typography></Slide></Divider>
             </Box>
-            <Zoom in={load} style={{ transitionDelay: load ? '300ms' : '0ms' }}>
-                <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
-                    <Card sx={{ maxWidth: 800, width: 360, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+            <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
+                <Slide direction="down" in={load} style={{ transitionDelay: load ? '600ms' : '0ms' }}>
+                    <Card sx={{ maxWidth: 800, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
                                 <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>  Languages  </Divider>
@@ -97,7 +97,10 @@ const About = () => {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                    <Card sx={{ maxWidth: 1000, width: 360, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+                </Slide>
+                <Slide direction="down" in={load} style={{ transitionDelay: load ? '500ms' : '0ms' }}>
+
+                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
                                 <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>   FrameWorks (web2) </Divider>
@@ -141,7 +144,10 @@ const About = () => {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                    <Card sx={{ maxWidth: 1000, width: 360, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+                </Slide>
+                <Slide direction="down" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
+
+                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
                                 <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>  FrameWorks (web3)  </Divider>
@@ -185,7 +191,10 @@ const About = () => {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                    <Card sx={{ maxWidth: 1000, width: 360, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+                </Slide>
+                <Slide direction="down" in={load} style={{ transitionDelay: load ? '300ms' : '0ms' }}>
+
+                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
                                 <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>  OS  </Divider>
@@ -224,8 +233,8 @@ const About = () => {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                </Box>
-            </Zoom>
+                </Slide>
+            </Box>
         </>
     )
 }
