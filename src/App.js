@@ -4,7 +4,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import Sidebardrawer from './components/sidebar/Sidebardrawer';
 import Mcontent from './components/maincontent';
 import { useState } from 'react';
-import { Drawer} from '@mui/material';
+import { Drawer } from '@mui/material';
 import Fab from '@mui/material/Fab';
 import { Box } from '@mui/material';
 import FormatListBulletedRoundedIcon from '@mui/icons-material/FormatListBulletedRounded';
@@ -13,7 +13,7 @@ import Pages from './components/pages/pages';
 
 function App() {
   const [value, setValue] = useState(0);
-  const [draweropen, setdraweropen] = useState(false);
+  const [draweropen, setdraweropen] = useState();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -27,8 +27,8 @@ function App() {
   return (
     <MYcontext.Provider value={{ value, setValue, draweropen, setdraweropen }}>
       <MainLayout>
-        <Box sx={{ display: { xs: "block", md: "none" },position:"absolute"}}>
-          <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary' sx={{m:3.5}}>
+        <Box sx={{ display: { xs: "block", md: "none" }, position: "absolute" }}>
+          <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary' sx={{ m: 3.5 }}>
             <FormatListBulletedRoundedIcon />
           </Fab>
         </Box>
@@ -45,10 +45,10 @@ function App() {
             }, display: { xs: "block", md: "none" },
           }}
         >
-          <Sidebardrawer handleChange={handleChange} handlechangetoggle={handlechangetoggle} setdraweropen={setdraweropen}/>
+          <Sidebardrawer handleChange={handleChange} handlechangetoggle={handlechangetoggle} setdraweropen={setdraweropen} />
         </Drawer>
         <Mcontent>
-         <Pages handleChange={handleChange} value={value}/>
+          <Pages handleChange={handleChange} value={value} />
         </Mcontent>
       </MainLayout>
     </MYcontext.Provider>

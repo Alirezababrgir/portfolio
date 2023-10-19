@@ -6,6 +6,7 @@ import Homepage from './homepage';
 import About from './aboutpage';
 import Resoume from './resoumepage';
 import Projects from './projects';
+import ConnectMe from './ConnectMe';
 const Pages = ({ handleChange, value }) => {
   return (
     <SwipeableViews index={value} onChangeIndex={handleChange} axis={theme.direction === 'ltr' ? 'x-reverse' : 'x'}>
@@ -21,17 +22,17 @@ const Pages = ({ handleChange, value }) => {
       </Tabpanel>
       <Tabpanel index={2}>
         <Box>
-          <Projects/>
+          <Projects />
         </Box>
       </Tabpanel>
       <Tabpanel index={3}>
         <Box>
-        <Resoume/>
+          <Resoume />
         </Box>
       </Tabpanel>
       <Tabpanel index={4}>
         <Box>
-          4
+          <ConnectMe />
         </Box>
       </Tabpanel>
     </SwipeableViews>
