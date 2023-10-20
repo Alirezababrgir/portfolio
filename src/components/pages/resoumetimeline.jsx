@@ -20,11 +20,11 @@ const MYtimeline = () => {
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        contentStyle={{ background: '#999', color: '#fff' }}
+        contentStyle={{ background: '#999', color: "text.primary"  }}
         contentArrowStyle={{ borderRight: '7px solid #999' }}
         className="vertical-timeline-element--work"
         date="2010 - 2011"
-        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        iconStyle={{ background: 'rgb(33, 150, 243)', color: "text.primary"  }}
         icon={<SignLanguageOutlined />}
       >
         <h3 className="vertical-timeline-element-title">Art Director</h3>
@@ -34,9 +34,8 @@ const MYtimeline = () => {
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        contentStyle={{ background: '#999', color: '#fff' }}
+        contentStyle={{ background: '#999', color: 'text.primary' }}
         contentArrowStyle={{ borderRight: '7px solid  #999' }}
-
         className="vertical-timeline-element--work"
         date="2008 - 2010"
         iconStyle={{ background: '#999', color: '#fff' }}
@@ -48,7 +47,7 @@ const MYtimeline = () => {
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        contentStyle={{ background: '#999', color: '#fff' }}
+        contentStyle={{ background: '#999', color: 'InfoText' }}
         contentArrowStyle={{ borderRight: '7px solid  #999' }}
 
         className="vertical-timeline-element--work"
@@ -62,12 +61,14 @@ const MYtimeline = () => {
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        contentStyle={{ background: '#999', color: '#fff' }}
+        contentStyle={{ background: '#999', color: 'WindowText' }}
         contentArrowStyle={{ borderRight: '7px solid  #999' }}
 
         className="vertical-timeline-element--education"
         date="April 2013"
-        iconStyle={{ background: '#999', color: '#fff' }}
+        iconStyle={{ background: '#999', color: 'text.primary' }}
+        icon={<SignLanguageOutlined />}
+
       >
         <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
         <h4 className="vertical-timeline-element-subtitle">Online Course</h4>

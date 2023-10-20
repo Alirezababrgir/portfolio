@@ -11,12 +11,16 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useMediaQuery } from '@mui/material';
-import Theme from '../../layuot/theme';
+import { Theme01 } from '../../layuot/theme';
 import { useEffect } from 'react';
-
-const Sidebardrawer = ({ handleChange, handlechangetoggle, setdraweropen }) => {
-
-    const mdup = useMediaQuery(Theme.breakpoints.up("md"));
+import { FormGroup, FormControl } from '@mui/material';
+import { FormControlLabel } from '@mui/material';
+import MaterialUISwitch from '../../layuot/ThemeButton';
+import { useContext } from 'react';
+import MYcontext from '../../context/context';
+const Sidebardrawer = () => {
+    const { setdraweropen, handleChange, handleTheme, handlechangetoggle } = useContext(MYcontext);
+    const mdup = useMediaQuery(Theme01.breakpoints.up("md"));
     useEffect(() => {
         if (mdup) {
             setdraweropen(false);
@@ -24,11 +28,18 @@ const Sidebardrawer = ({ handleChange, handlechangetoggle, setdraweropen }) => {
     }, [mdup]);
 
     return (
-        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "100vh", overflowY: "auto",overflowX:"hidden" }} color={grey[100]}>
+        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "100vh", overflowY: "auto", overflowX: "hidden" }} color={grey[100]}>
             <Box sx={{ display: { xs: "block", md: "none" }, m: 0.2 }}>
                 <Fab onClick={handlechangetoggle} variant="circular" color='primary' size="small" aria-label='sidebar'>
                     <KeyboardDoubleArrowLeftRoundedIcon />
                 </Fab>
+                <FormControl onChange={handleTheme} sx={{mx:14, position:"absolute" }}>
+                <FormGroup >
+                    <FormControlLabel
+                        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+                    />
+                </FormGroup>
+            </FormControl>
             </Box>
             <Avatar sx={{ width: "110px", height: "110px", margin: "0 auto", outline: " double 3.5px #03a9f4" }} variant="circular" src='https://toplearn.com/img/user/250x259/2402cc6d-1d17-6a22-e6cc-39e3248f13a4_%D8%A7%DB%8C%D9%85%D8%A7%D9%86_%D9%85%D8%AF%D8%A7%D8%A6%D9%86%DB%8C9.jpg' />
             <Divider variant="middle" sx={{ mt: 2, mb: 1, color: "white" }} color={grey[600]} />

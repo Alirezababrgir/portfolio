@@ -30,7 +30,7 @@ const TaBs = ({ handleChange }) => {
     return (
         <Tabs onChange={handleChange} value={value} aria-label="icon label tabs example" orientation="vertical" allowScrollButtonsMobile scrollButtons="auto">
             {tabs.map((tab, index) => (
-                <Tab key={index} icon={tab.icon} iconPosition='start' label={tab.label} sx={{ "&.MuiTab-root": { minHeight: 55 }, backgroundColor: "silver", borderRadius: "4px", m: 1 }} {...tab} />
+                <Tab key={index} icon={tab.icon} iconPosition='start' label={tab.label} sx={{ "&.MuiTab-root": { minHeight: 55 }, backgroundColor:"#999", borderRadius: "4px", m: 1 }} {...tab} />
             ))}
         </Tabs>
     )

@@ -1,4 +1,4 @@
-import { Box, Divider, Slide, Typography, Zoom } from "@mui/material";
+import { Box, Divider, Slide, Typography,Chip} from "@mui/material";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
@@ -49,14 +49,14 @@ const About = () => {
                 <title> بیوگرافی من | مهارت من  </title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography sx={{ color: "black" }}>مهارت ها</Typography></Slide></Divider>
+            <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "text.primary" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{color:"#333"}} label="مهارت ها" variant="filled" /></Slide></Divider>
             </Box>
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
                 <Slide direction="down" in={load} style={{ transitionDelay: load ? '600ms' : '0ms' }}>
                     <Card sx={{ maxWidth: 800, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
-                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>  Languages  </Divider>
+                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  Languages  </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         <SiHtml5 />  Html <SiCss3 />css
@@ -81,7 +81,7 @@ const About = () => {
                                     </Typography>
                                     <CircularWithValueLabel value={70} c={"info"} />
                                 </Divider>
-                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "black" } }}>  Database </Divider>
+                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  Database </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Mongodb <SiMongodb />
@@ -103,7 +103,7 @@ const About = () => {
                     <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
-                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>   FrameWorks (web2) </Divider>
+                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>   FrameWorks (web2) </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         React.js <SiReact />
@@ -122,7 +122,7 @@ const About = () => {
                                     </Typography>
                                     <CircularWithValueLabel value={85} c={"primary"} />
                                 </Divider>
-                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "black" } }}>  Design By </Divider>
+                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  Design By </Divider>
                                 <Divider textAlign="left">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Material-ui <SiMaterialdesign />
@@ -150,7 +150,7 @@ const About = () => {
                     <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
-                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>  FrameWorks (web3)  </Divider>
+                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary"} }}>  FrameWorks (web3)  </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Web3.js <SiWeb3Dotjs />
@@ -169,7 +169,7 @@ const About = () => {
                                     </Typography>
                                     <CircularWithValueLabel value={85} c={"warning"} />
                                 </Divider>
-                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "black" } }}> Nodes </Divider>
+                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary"} }}> Nodes </Divider>
                                 <Divider textAlign="left">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Alchemy <SiAlchemy />
@@ -197,14 +197,14 @@ const About = () => {
                     <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
-                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "black" } }}>  OS  </Divider>
+                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  OS  </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Linux <SiLinux />
                                     </Typography>
                                     <CircularWithValueLabel value={70} c={"success"} />
                                 </Divider>
-                                <Divider sx={{ mb: 2.5, mt: 2.5, "&::before,&::after": { borderColor: "black" } }}>  IDE  </Divider>
+                                <Divider sx={{ mb: 2.5, mt: 2.5, "&::before,&::after": { borderColor: "text.primary" } }}>  IDE  </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         VisualStaduioCode <SiVisualstudiocode />
@@ -217,7 +217,7 @@ const About = () => {
                                     </Typography>
                                     <CircularWithValueLabel value={70} c={"primary"} />
                                 </Divider>
-                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "black" } }}> Version Controlers </Divider>
+                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor:"text.primary"} }}> Version Controlers </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Github <SiGithub />

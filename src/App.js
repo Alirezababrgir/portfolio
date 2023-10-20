@@ -3,7 +3,7 @@ import MainLayout from './layuot/Mainlayout';
 import Sidebar from './components/sidebar/Sidebar';
 import Sidebardrawer from './components/sidebar/Sidebardrawer';
 import Mcontent from './components/maincontent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Drawer } from '@mui/material';
 import Fab from '@mui/material/Fab';
 import { Box } from '@mui/material';
@@ -14,6 +14,15 @@ import Pages from './components/pages/pages';
 function App() {
   const [value, setValue] = useState(0);
   const [draweropen, setdraweropen] = useState();
+  const [mod, setmod] = useState("light");
+
+  useEffect(() => {
+    setmod("dark");
+  }, [])
+
+  const handleTheme=() => {
+    setmod((prevmod) => (prevmod === "light" ? "dark" : "light"))
+  }
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -25,7 +34,7 @@ function App() {
 
 
   return (
-    <MYcontext.Provider value={{ value, setValue, draweropen, setdraweropen }}>
+    <MYcontext.Provider value={{ value, setValue, draweropen, setdraweropen,handleTheme,mod,handleChange,handlechangetoggle}}>
       <MainLayout>
         <Box sx={{ display: { xs: "block", md: "none" }, position: "absolute" }}>
           <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary' sx={{ m: 3.5 }}>
