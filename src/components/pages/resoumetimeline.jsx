@@ -20,7 +20,7 @@ const MYtimeline = () => {
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        contentStyle={{ background: '#999', color: "text.primary"  }}
+        contentStyle={{ backgroundColor: "#999", color: "text.primary"  }}
         contentArrowStyle={{ borderRight: '7px solid #999' }}
         className="vertical-timeline-element--work"
         date="2010 - 2011"

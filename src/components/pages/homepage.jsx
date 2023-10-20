@@ -10,10 +10,12 @@ import { Part1 } from "../../particels/particels";
 import TextTransition, { presets } from 'react-text-transition';
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import {Chip} from "@mui/material";
+import { Chip } from "@mui/material";
+import { useTheme } from "@emotion/react";
+import { grey } from "@mui/material/colors";
 const Homepage = () => {
 
-
+    const theme = useTheme();
     const particlesInit = useCallback(async engine => {
         console.log(engine);
         await loadSlim(engine);
@@ -36,30 +38,30 @@ const Homepage = () => {
     }, []);
 
 
-        const [load, setload] = useState(false);
-        useEffect(() => {
-            setload(true);      //Mount
-            return () => {
-                setload(false); //unMount
-            }
-        }, []);
+    const [load, setload] = useState(false);
+    useEffect(() => {
+        setload(true);      //Mount
+        return () => {
+            setload(false); //unMount
+        }
+    }, []);
 
-        const TEXTS = ['توسعه دهنده فول استک ', 'توسعه دهنده بلاکچین  ', 'عاشق لینوکس هستم'];
+    const TEXTS = ['توسعه دهنده فول استک ', 'توسعه دهنده بلاکچین  ', 'عاشق لینوکس هستم'];
 
 
-        return (
+    return (
 
-            <>
-                <Helmet>
-                    <title>بیوگرافی من | صفحه اصلی</title>
-                </Helmet>
-                <Box sx={{ p: 3 }}>
-                    <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
-                    <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "text.primary" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{color:"#333"}} label=" سلام" variant="filled" /></Slide></Divider>
-                </Box>
-                <Zoom direction="up" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
-                    <Box sx={{ height: "100vh"}}>
-                        <Box sx={{ backgroundColor:"#2222",height: "60%", width:"60%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", mt: 8 }}>
+        <>
+            <Helmet>
+                <title>بیوگرافی من | صفحه اصلی</title>
+            </Helmet>
+            <Box sx={{ p: 3 }}>
+                <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{ color: "#111" }} label=" سلام" variant="filled" /></Slide></Divider>
+            </Box>
+            <Zoom direction="up" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
+                <Box sx={{ height: "100vh" }}>
+                    <Box sx={{ backgroundColor: theme.palette.mode === "dark" ? "#1113" : grey, height: "60%", width: "60%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", mt: 8 }}>
                         <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
                         <Typed
                             strings={['( : سلام من علیرضا هستم']}
@@ -73,11 +75,11 @@ const Homepage = () => {
                             </Typography>
                         </Box>
                     </Box>
-                    </Box>
-                </Zoom>
-            </>
+                </Box>
+            </Zoom>
+        </>
 
 
-        )
-    }
-    export default Homepage;
+    )
+}
+export default Homepage;

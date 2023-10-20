@@ -1,10 +1,12 @@
-import { Box, Divider, Slide, Typography,Chip} from "@mui/material";
+import { Box, Divider, Slide, Typography, Chip } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
 import { CircularWithValueLabel } from "./progressbar";
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
+import { useTheme } from "@mui/material";
+
 import {
     SiSolidity,
     SiNodedotjs,
@@ -28,12 +30,12 @@ import {
     SiVisualstudiocode,
 
 } from "react-icons/si";
+import { grey } from "@mui/material/colors";
 
 
 
 const About = () => {
-
-
+    const theme = useTheme();
     const [load, setload] = useState(false);
     useEffect(() => {
         setload(true);      //Mount
@@ -49,11 +51,11 @@ const About = () => {
                 <title> بیوگرافی من | مهارت من  </title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-            <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "text.primary" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{color:"#333"}} label="مهارت ها" variant="filled" /></Slide></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{ color: "#111" }} label="مهارت ها" variant="filled" /></Slide></Divider>
             </Box>
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
                 <Slide direction="down" in={load} style={{ transitionDelay: load ? '600ms' : '0ms' }}>
-                    <Card sx={{ maxWidth: 800, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+                    <Card sx={{ maxWidth: 800, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
                                 <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  Languages  </Divider>
@@ -100,7 +102,7 @@ const About = () => {
                 </Slide>
                 <Slide direction="down" in={load} style={{ transitionDelay: load ? '500ms' : '0ms' }}>
 
-                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
                                 <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>   FrameWorks (web2) </Divider>
@@ -147,10 +149,10 @@ const About = () => {
                 </Slide>
                 <Slide direction="down" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
 
-                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
-                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary"} }}>  FrameWorks (web3)  </Divider>
+                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  FrameWorks (web3)  </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Web3.js <SiWeb3Dotjs />
@@ -169,7 +171,7 @@ const About = () => {
                                     </Typography>
                                     <CircularWithValueLabel value={85} c={"warning"} />
                                 </Divider>
-                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary"} }}> Nodes </Divider>
+                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}> Nodes </Divider>
                                 <Divider textAlign="left">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Alchemy <SiAlchemy />
@@ -194,7 +196,7 @@ const About = () => {
                 </Slide>
                 <Slide direction="down" in={load} style={{ transitionDelay: load ? '300ms' : '0ms' }}>
 
-                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: "#999", borderRadius: "0.5rem" }}>
+                    <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], borderRadius: "0.5rem" }}>
                         <CardActionArea>
                             <CardContent>
                                 <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  OS  </Divider>
@@ -217,7 +219,7 @@ const About = () => {
                                     </Typography>
                                     <CircularWithValueLabel value={70} c={"primary"} />
                                 </Divider>
-                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor:"text.primary"} }}> Version Controlers </Divider>
+                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}> Version Controlers </Divider>
                                 <Divider textAlign="right">
                                     <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
                                         Github <SiGithub />

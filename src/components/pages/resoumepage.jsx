@@ -18,7 +18,7 @@ const Resoume = () => {
                 <title>بیوگرافی من |  رزومه من</title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-            <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "text.primary" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{color:"#333"}} label="رزومه" variant="filled" /></Slide></Divider>
+            <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{color:"#111"}} label="رزومه" variant="filled" /></Slide></Divider>
             </Box>
             <MYtimeline/>
         </>

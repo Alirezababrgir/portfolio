@@ -18,7 +18,9 @@ import { FormControlLabel } from '@mui/material';
 import MaterialUISwitch from '../../layuot/ThemeButton';
 import { useContext } from 'react';
 import MYcontext from '../../context/context';
+import { useTheme } from '@emotion/react';
 const Sidebardrawer = () => {
+    const theme=useTheme();
     const { setdraweropen, handleChange, handleTheme, handlechangetoggle } = useContext(MYcontext);
     const mdup = useMediaQuery(Theme01.breakpoints.up("md"));
     useEffect(() => {
@@ -28,7 +30,7 @@ const Sidebardrawer = () => {
     }, [mdup]);
 
     return (
-        <Grid id="Gr" item md={3} sx={{ backgroundColor: "gray.main", padding: "0.5rem", height: "100vh", overflowY: "auto", overflowX: "hidden" }} color={grey[100]}>
+        <Grid id="Gr" item md={3} sx={{ backgroundColor: theme.palette.mode === "light" ? "#444" : grey[900], padding: "0.5rem", height: "100vh", overflowY: "auto", overflowX: "hidden" }} color={grey[100]}>
             <Box sx={{ display: { xs: "block", md: "none" }, m: 0.2 }}>
                 <Fab onClick={handlechangetoggle} variant="circular" color='primary' size="small" aria-label='sidebar'>
                     <KeyboardDoubleArrowLeftRoundedIcon />

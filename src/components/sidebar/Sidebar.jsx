@@ -13,12 +13,13 @@ import { FormControlLabel } from '@mui/material';
 import MaterialUISwitch from '../../layuot/ThemeButton';
 import { useContext } from 'react';
 import MYcontext from '../../context/context';
+import { useTheme } from '@emotion/react';
 const Sidebar = () => {
-
+const theme=useTheme();
     const { handleChange, handleTheme } = useContext(MYcontext);
 
     return (
-        <Grid id="Gr" item md={3} lg={2} sx={{ backgroundColor: "#444", p: 1, height: "100vh", display: { xs: "none", md: "block" }, mx: 0, overflowY: "auto", overflowX: "hidden" }} color={grey[100]}>
+        <Grid id="Gr" item md={3} lg={2} sx={{backgroundColor: theme.palette.mode === "light" ? "#444" : grey[900], p: 1, height: "100vh", display: { xs: "none", md: "block" }, mx: 0, overflowY: "auto", overflowX: "hidden" }} color={grey[100]}>
             <FormControl onChange={handleTheme} sx={{ mx: 8, position: "absolute" }}>
                 <FormGroup >
                     <FormControlLabel

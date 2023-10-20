@@ -1,9 +1,9 @@
 import { createContext } from "react"
  const MYcontext=createContext({
     value:0,
-    mod:"",
     setValue:()=>{},
     draweropen:false,
+    mod:"",
     setdraweropen:()=>{},
     handleTheme:()=>{},
     handleChange:()=>{},
