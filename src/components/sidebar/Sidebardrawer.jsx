@@ -27,7 +27,7 @@ const Sidebardrawer = () => {
         if (mdup) {
             setdraweropen(false);
         }
-    }, [mdup]);
+    }, [mdup,setdraweropen]);
 
     return (
         <Grid id="Gr" item md={3} sx={{ backgroundColor: theme.palette.mode === "light" ? "#444" : grey[900], padding: "0.5rem", height: "100vh", overflowY: "auto", overflowX: "hidden" }} color={grey[100]}>

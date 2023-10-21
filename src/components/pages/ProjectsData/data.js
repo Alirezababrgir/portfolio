@@ -1,7 +1,6 @@
 import Webappimg from "../../../assetes/Screenshot from 2023-10-18 07-57-46.png"
 import Portfolioimg from "../../../assetes/Screenshot from 2023-10-18 08-41-42.png"
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { WebRounded } from "@mui/icons-material";
 const Data = [
     {
         Tittle: " اپلیکیشن  مخاطبین",
