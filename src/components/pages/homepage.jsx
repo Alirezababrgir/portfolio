@@ -55,13 +55,13 @@ const Homepage = () => {
             <Helmet>
                 <title>بیوگرافی من | صفحه اصلی</title>
             </Helmet>
-            <Box sx={{ p: 3 }}>
+            <Box sx={{ p: 3,height:"20vh" }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{ color: "#111" }} label=" سلام" variant="filled" /></Slide></Divider>
             </Box>
             <Zoom direction="up" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
-                <Box sx={{ height: "100vh" }}>
-                    <Box sx={{ backgroundColor: theme.palette.mode === "dark" ? "#1113" : grey, height: "60%", width: "60%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", mt: 8 }}>
+                <Box sx={{ height: "80vh" }}>
+                    <Box sx={{ backgroundColor: theme.palette.mode === "dark" ? "#1113" : grey, height: "80%", width: "80%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
                         <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
                         <Typed
                             strings={['( : سلام من علیرضا هستم']}
