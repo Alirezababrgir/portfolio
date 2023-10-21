@@ -4,4 +4,5 @@ export  const userSchema =Yup.object().shape({
     email: Yup.string().email("آدرس ایمیل معتبر نیست").required("آدرس ایمیل الزامیست"),
     subject: Yup.string().required("نوشتن عنوان الزامیست"),
     message: Yup.string().required("نوشتن پیام الزامیست"),
+    recaptcha: Yup.string().required("کپچا الزامیست"),
 });

@@ -1,4 +1,4 @@
-import { Avatar, Divider, Grid, Slide, TextField, InputAdornment, Button, CardActions, CardContent, Zoom } from "@mui/material";
+import { Avatar, Divider, Grid, Slide, TextField, InputAdornment, Button, CardActions, CardContent, Zoom, Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -9,18 +9,21 @@ import emailpng from "../../assetes/world-connection-flatline-bdcc8.png";
 import { Face6Rounded, SubjectRounded, EmailRounded } from "@mui/icons-material";
 import { useFormik } from 'formik';
 import { userSchema } from "./validation/FormSchema";
+import ReCAPTCHA from "react-google-recaptcha";
+
 const ConnectMe = () => {
 
-const inputstrings={
-    fullname: '',
-    email: '',
-    subject: '',
-    message: '',
-}
+    const inputstrings = {
+        fullname: '',
+        email: '',
+        subject: '',
+        message: '',
+        recaptcha: ""
+    }
     const formik = useFormik({
-        initialValues:inputstrings,
-        onSubmit:(values)=>{console.log("formic values:",values)},
-        validationSchema:userSchema
+        initialValues: inputstrings,
+        onSubmit: (values) => { console.log("formic values:", values) },
+        validationSchema: userSchema
     });
 
 
@@ -63,8 +66,8 @@ const inputstrings={
                                                     color="primary"
                                                     label="نام و نام خانوادگی"
                                                     name={"fullname"}
-                                                    helperText={ formik.touched.fullname ? formik.errors.fullname : null}
-                                                    error={Boolean(formik.touched.fullname&&formik.errors.fullname)}
+                                                    helperText={formik.touched.fullname ? formik.errors.fullname : null}
+                                                    error={Boolean(formik.touched.fullname && formik.errors.fullname)}
                                                     value={formik.values?.fullname}
                                                     onChange={formik.handleChange}
                                                     variant="outlined"
@@ -84,8 +87,8 @@ const inputstrings={
                                                     color="primary"
                                                     label="آدرس ایمیل"
                                                     name={"email"}
-                                                    helperText={formik.touched.email ? formik.errors.email: null}
-                                                    error={Boolean(formik.touched.email&&formik.errors.email)}
+                                                    helperText={formik.touched.email ? formik.errors.email : null}
+                                                    error={Boolean(formik.touched.email && formik.errors.email)}
                                                     value={formik.values?.email}
                                                     onChange={formik.handleChange}
                                                     variant="outlined"
@@ -105,15 +108,15 @@ const inputstrings={
                                                     color="primary"
                                                     label="عنوان"
                                                     name={"subject"}
-                                                    helperText={formik.touched.subject ? formik.errors.subject: null}
-                                                    error={Boolean(formik.touched.subject&&formik.errors.subject)}
+                                                    helperText={formik.touched.subject ? formik.errors.subject : null}
+                                                    error={Boolean(formik.touched.subject && formik.errors.subject)}
                                                     value={formik.values?.subject}
                                                     onChange={formik.handleChange}
                                                     variant="outlined"
                                                     InputProps={{
                                                         endAdornment: (
                                                             <InputAdornment postion="end">
-                                                                <SubjectRounded />
+                                                                <SubjectRounded/>
                                                             </InputAdornment>
                                                         ),
                                                     }}
@@ -145,6 +148,16 @@ const inputstrings={
                                     flexDirection: "column",
                                 }}
                             >
+                                <ReCAPTCHA
+                                    sitekey="6LcuBL0oAAAAAD3eNdJj8EkYKBWcmI7QQrGugFlB"
+                                    theme={theme.palette.mode}
+                                    hl="fa"
+                                    onChange={(value) => { formik.setFieldValue("recaptcha", value) }}
+                                />
+                                {formik.errors.recaptcha && formik.touched.recaptcha ? (
+                                    <Typography sx={{ fontSize: "10px" }} color={"error"}>
+                                        {formik.errors.recaptcha}
+                                    </Typography>) : null}
                                 <Button
                                     type="submit"
                                     color="info"
