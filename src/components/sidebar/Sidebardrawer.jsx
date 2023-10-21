@@ -50,7 +50,7 @@ const Sidebardrawer = () => {
             <TabsDrawer handleChange={handleChange} />
             <Divider variant="middle" sx={{ mt: 1, mb: 1, color: "white" }} color={grey[600]} />
             <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
-                <a href='https://www.babrgiralireza@gmail.com' rel="noreferrer noopener" target="_blank" >
+                <a href='mailto:babrgiralireza@gmail.com' rel="noreferrer noopener" target="_blank" >
                     <EmailIcon aria-label="Email" sx={{ color: "grey", mx: 1 }} />
                 </a>
                 <a href='https://www.github.com/alirezababrgir' rel="noreferrer noopener" target="_blank" >

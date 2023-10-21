@@ -57,7 +57,7 @@ const Homepage = () => {
             </Helmet>
             <Box sx={{ p: 3,height:"20vh" }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip sx={{ color: "#111" }} label=" سلام" variant="filled" /></Slide></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{ color: "primary" }} label=" سلام" variant="filled" /></Slide></Divider>
             </Box>
             <Zoom direction="up" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
                 <Box sx={{ height: "80vh" }}>
