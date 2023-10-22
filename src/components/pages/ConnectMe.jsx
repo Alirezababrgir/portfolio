@@ -12,7 +12,7 @@ import { userSchema } from "./validation/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const ConnectMe = () => {
-  
+
 
     const inputstrings = {
         fullname: '',
@@ -39,17 +39,16 @@ const ConnectMe = () => {
     }, []);
 
 
-
     return (
 
         <>
             <Helmet>
                 <title>بیوگرافی من | ارتباط با من </title>
             </Helmet>
-            <Box sx={{ p: 3, height: "20vh" }}>
+            <Box sx={{ p: 3, height: "10vh" }}>
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{ color: "primary" }} label=" ارتباط با من" variant="filled" /></Slide></Divider>
             </Box>
-            <Grid container sx={{ height: "80vh", }}>
+            <Grid container sx={{ height: "90vh", }}>
                 <Zoom direction="down" in={load} style={{ transitionDelay: load ? '1500ms' : '0ms' }}>
                     <Grid xs={12} lg={6} sx={{ display: "flex", p: 4, flexWrap: "nowrap", justifyContent: "center", alignItems: "center" }}>
                         <form onSubmit={formik.handleSubmit} autoComplete="off" style={{ backgroundColor: theme.palette.mode === "light" ? "#999" : grey[800], padding: "0.5rem", borderRadius: "0.5rem" }}>
@@ -178,7 +177,6 @@ const ConnectMe = () => {
                     </Slide>
                 </Grid>
             </Grid>
-          
         </>
 
     )
