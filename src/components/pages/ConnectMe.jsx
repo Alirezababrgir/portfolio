@@ -12,6 +12,7 @@ import { userSchema } from "./validation/FormSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const ConnectMe = () => {
+  
 
     const inputstrings = {
         fullname: '',
@@ -51,7 +52,7 @@ const ConnectMe = () => {
             <Grid container sx={{ height: "80vh", }}>
                 <Zoom direction="down" in={load} style={{ transitionDelay: load ? '1500ms' : '0ms' }}>
                     <Grid xs={12} lg={6} sx={{ display: "flex", p: 4, flexWrap: "nowrap", justifyContent: "center", alignItems: "center" }}>
-                        <form onSubmit={formik.handleSubmit} autoComplete="off" style={{ backgroundColor: theme.palette.mode === "light" ? "#1111" : grey[800], padding: "0.5rem", borderRadius: "0.5rem" }}>
+                        <form onSubmit={formik.handleSubmit} autoComplete="off" style={{ backgroundColor: theme.palette.mode === "light" ? "#999" : grey[800], padding: "0.5rem", borderRadius: "0.5rem" }}>
                             <CardContent>
                                 <Grid container>
                                     <Grid
@@ -116,7 +117,7 @@ const ConnectMe = () => {
                                                     InputProps={{
                                                         endAdornment: (
                                                             <InputAdornment postion="end">
-                                                                <SubjectRounded/>
+                                                                <SubjectRounded />
                                                             </InputAdornment>
                                                         ),
                                                     }}
@@ -149,7 +150,7 @@ const ConnectMe = () => {
                                 }}
                             >
                                 <ReCAPTCHA
-                                    sitekey="6LcuBL0oAAAAAD3eNdJj8EkYKBWcmI7QQrGugFlB"
+                                    sitekey={process.env.REACT_APP_PUBLICKKEY}
                                     theme={theme.palette.mode}
                                     hl="fa"
                                     onChange={(value) => { formik.setFieldValue("recaptcha", value) }}
@@ -177,6 +178,7 @@ const ConnectMe = () => {
                     </Slide>
                 </Grid>
             </Grid>
+          
         </>
 
     )
