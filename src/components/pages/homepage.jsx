@@ -6,7 +6,7 @@ import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
-import { Part1 } from "../../particels/particels";
+import { Part1 } from "../../layuot/particels";
 import TextTransition, { presets } from 'react-text-transition';
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
