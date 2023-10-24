@@ -1,31 +1,8 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { useTheme } from '@emotion/react';
-import { InsertEmoticonRounded, School,  TerminalRounded, TrendingDownRounded,  HubRounded, WbIncandescentRounded, HandymanRounded} from '@mui/icons-material';
-import {
-  SiSolidity,
-  SiNodedotjs,
-  SiReact,
-  SiHtml5,
-  SiCss3,
-  SiGit,
-  SiGithub,
-  SiRedux,
-  SiMongodb,
-  SiJavascript,
-  SiMaterialdesign,
-  SiBootstrap,
-  SiTailwindcss,
-  SiLinux,
-  SiIntellijidea,
-  SiMysql,
-  SiNextdotjs,
-  SiWeb3Dotjs,
-  SiAlchemy,
-  SiVisualstudiocode,
-  SiTarget
-
-} from "react-icons/si";
+import { School, TerminalRounded, TrendingDownRounded, HubRounded, WbIncandescentRounded, HandymanRounded, PersonRounded } from '@mui/icons-material';
+import { SiSolidity, SiNodedotjs, SiReact, SiJavascript } from "react-icons/si";
 import { blue, green, grey, orange, red, yellow } from '@mui/material/colors';
 
 const MYtimeline = () => {
@@ -36,15 +13,18 @@ const MYtimeline = () => {
     <VerticalTimeline lineColor='#fff'>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        contentStyle={{ backgroundColor: "#4c7d9f" }}
+        contentStyle={{ backgroundColor:mytheme.palette.mode === "dark" ? blue[900] :"#4c7d9f",color: mytheme.palette.mode === "dark" ? grey[300] : grey[800] }}
         contentArrowStyle={{ borderRight: '7px solid  #4C7D9F' }}
-        iconStyle={{ background:  mytheme.palette.mode === "dark" ? blue[800] : blue[500], color: mytheme.palette.mode === "dark" ? grey[200] : grey[800]}}
-        icon={<SiTarget/>}
+        iconStyle={{ background: mytheme.palette.mode === "dark" ? blue[800] :"#4c7d9f", color: mytheme.palette.mode === "dark" ? grey[200] : grey[900] }}
+        icon={<PersonRounded/>}
       >
         <h3 className="vertical-timeline-element-title"> از گچ کاری  تا امنیت بلاکچین</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">مرور ۱۰ سال</h4>
         <p>
-          اسکرول کنید تا با رزومه من به اهمیت دانش پی ببرید
+          اسکرول کنید تا با رزومه کاری و تحصیلی من اشنا بشید
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -56,6 +36,9 @@ const MYtimeline = () => {
         icon={<School />}
       >
         <h3 className="vertical-timeline-element-title"> ترک تحصیل</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">دیپلم تجربی</h4>
         <p>
           خیلی زود علارقم علاقه به تحصیل بخاطر شرایط مالی با مدرک دیپلم تجربی ترک تحصیل کردم
@@ -66,10 +49,13 @@ const MYtimeline = () => {
         contentArrowStyle={{ borderRight: '7px solid  #999' }}
         className="vertical-timeline-element--work"
         date="2008 - 2010"
-        iconStyle={{ background: '#999', color:yellow[600] }}
+        iconStyle={{ background: '#999', color: yellow[600] }}
         icon={<HandymanRounded />}
       >
         <h3 className="vertical-timeline-element-title">کارگری ساختمان </h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle"> گچ کاری</h4>
         <p>
           مجبور بودم برای کمک به خانواده کارگری کنم
@@ -84,6 +70,9 @@ const MYtimeline = () => {
         iconStyle={{ background: '#999', color: '#4c7d9f' }}
       >
         <h3 className="vertical-timeline-element-title">پا دویی و بازاریابی </h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">پا دویی بازار و بازاریابی شبکه ای</h4>
         <p>
           توسط یکی از دوستانم به یکی از شرکتهای بازاریابی شبکه ای معرفی شدم و بعد از مدتی توسط همون شخص به بازاریابی کردن برای پارچه معرفی شدم و بعد از دوسال تونستم با سفر کردن به شهر های مختلف مشتری قابل توجهی بدست بیارم و بعد بهمراه یکی از اشناها تو بازار تهران تونستم تو ۲۲ سالگی تو بازار اصلی مغازه باز کنم همراه با کلی مشتری بلقوه از سراسر ایران
@@ -99,6 +88,9 @@ const MYtimeline = () => {
 
       >
         <h3 className="vertical-timeline-element-title">سقوط</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">تحریم و اعتماد</h4>
         <p>
           خیلی زود تحریم های امریکا علیه ایران شروع شد و بازار ازاد تو کما برای همیشه فرو رفت و فیلترینگ شبکه های اجتماعی و قطع ارتباط ما با مشتری ها هم به این موضوع دامن زد تا دلیلی بر شونه خالی کردن شریکم زیر کرایه سنگین مغازه بشه و درنهایت من دموندم و من با کلی بدهی و شکست سنگین از اعتماد به اشنا و پارچه هایی که کسی حاظر نبود حتی زیر قیت تولید بخره
@@ -113,6 +105,9 @@ const MYtimeline = () => {
         iconStyle={{ background: '#999', color: orange[400] }}
       >
         <h3 className="vertical-timeline-element-title">بازگشت</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">اما نه به شکل قبل</h4>
         <p>
           بعد از تحویل مغازه بازار طلبکار ها به سراغم اومدن و همزمان به چند دادگاه ارجا شدم همون حین یکی از اشناها یک بازار یابی بهم معرفی کرد که اینبار فرق داشت پلتفرم ان توسط قراد داد هوشمند کنترل و تضمین میشد و پاداش ان به صورت رمزارز بین بازاریاب ها داده میشد همان هنگام بقول معروف لامپم روشن شد ارررره خودشه همونه که میخواستم . من محو قدرت بلاکچین شده بودم چون نه تنها تحریم بلکه مشکل اعتماد هم میشه توسط قرارداد هوشمند تضمین کرد دیگه هیچ چیز نمیتونه هیچجوره کسب و کارمو تهدید کنه . این همون چیزی بود که میخواستم یعنی امنیت شغلی و خوشبختانه تونستم از فعالیت در همین بازاریابی پول طلبکارهارو پرداخت کنم و رضایت اونارو جلب کنم
@@ -127,6 +122,9 @@ const MYtimeline = () => {
         iconStyle={{ background: '#999', color: green[800] }}
       >
         <h3 className="vertical-timeline-element-title">برنامه نویسی</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">بدون وقت تلف کردن</h4>
         <p>
           بسیار  زیاد درمورد بلاکچین و قراردادهای هوشمند بدون خستگی ماه ها مطالعه کردم و رفته رفته حیرت زده تر میشدم تا متوجه شدم باید خودم دست بکار بشم و کسب و کارمو بصورت قرارداد هوشمند روی بلاکچین بنویسم و شروع کردم به اموزش دیدن
@@ -142,7 +140,10 @@ const MYtimeline = () => {
       >
 
         <h3 className="vertical-timeline-element-title">یادگیری فرانت</h3>
-        <h5 className="vertical-timeline-element-subtitle">بیسیک</h5>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
+        <h4 className="vertical-timeline-element-subtitle">بیسیک</h4>
         <br />
         <h4 className="vertical-timeline-element-subtitle">Html5,Css3,flexbox,Javascript(Es6),Bootstrap,Ajax(axios,xml,jquery)</h4>
         <p>
@@ -155,10 +156,12 @@ const MYtimeline = () => {
         icon={<SiSolidity />}
         className="vertical-timeline-element--education"
         date="2002 - 2006"
-        iconStyle={{ background: '#999', color: "#333"}}
+        iconStyle={{ background: '#999', color: "#333" }}
       >
-
         <h3 className="vertical-timeline-element-title">یادگیری سالیدیتی</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">اما ناموفق</h4>
         <p>
           طبق نقشه راهی که از استاید و منابع انلاین داشتم حس کردم وقتشه برم سراغ سالیدیتی بلافاصله توی یک بوت کمپ حضوری با عنوان بوت کمپ برنامه نویسی بلاکچین ثبت نام کردم اما خیلی از از نکات رو متوجه نمیشدم مثل نود پکیج و خیلی از اصطلاحات دیگ رو و علاوه بر ان نیاز دیدم حداقل با یکی از فریم ورک های جاوااسکریپت  باید  بلد باشم کار کنم چه برسه به فریم ورک ها و کتابخانه های سالیدیتی خلاصه به این درک رسیدم تا نتونم یک پلیکیشن وب ۲ رو پیاده سازی کنم نمیتونم سراغ وب ۳ برم
@@ -173,6 +176,9 @@ const MYtimeline = () => {
         iconStyle={{ background: '#999', color: blue[800] }}
       >
         <h3 className="vertical-timeline-element-title">یادگیری فرانت</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">پیشرفته </h4>
         <br />
         <h4 className="vertical-timeline-element-subtitle">React.js,Redux,Next.js,MaterialUi,...</h4>
@@ -189,11 +195,33 @@ const MYtimeline = () => {
         iconStyle={{ background: '#999', color: green[800] }}
       >
         <h3 className="vertical-timeline-element-title">یادگیری بک</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
         <h4 className="vertical-timeline-element-subtitle">صفرتاصد </h4>
         <br />
         <h4 className="vertical-timeline-element-subtitle">node.js</h4>
         <p>
           حالا دیگه میتونستم هر اپلیکیشنی که میخوام رو بسازم وحالا دیگه به وب ۲ هم علاقه پیدا کرده بودم اما مشکلی وجود داشت ! اون هم اینکه داده ها در اپلیکیشن من واقعی نبودند و صرفا ابجکت هایی بودن که تو فایل جیسون اپلیکشن ذخیره کرده بودم پس ه فکر نوشتن کد سمت سرور افتادم و چه زبانی بهتر از جاوااسکریپت که باهاش بسیار راحتم پس سراغ نود جی اس رفتم
+        </p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        contentStyle={{ backgroundColor: mytheme.palette.mode === "dark" ? grey[800] : "#999", color: mytheme.palette.mode === "dark" ? grey[200] : grey[800] }}
+        contentArrowStyle={{ borderRight: '7px solid  #999' }}
+        icon={<SiSolidity />}
+        className="vertical-timeline-element--education"
+        date="2002 - 2006"
+        iconStyle={{ background: '#999', color: "#333" }}
+      >
+        <h3 className="vertical-timeline-element-title">یادگیری سالیدیتی</h3>
+        <br />
+        <hr style={{ borderColor: mytheme.palette.mode === "dark" ? grey[400] : grey[500] }} />
+        <br />
+        <h4 className="vertical-timeline-element-subtitle">بهمراه فریم ورک ها و ابزارها </h4>
+        <br />
+        <h4 className="vertical-timeline-element-subtitle"> Solidity,web3.js,Truffle,Hardhat<br />in_Remixide,in_Vscode,Ganache,Infura,Alchemy,...</h4>
+        <p>
+          حالا دیگه کاملا میتونستم صفرتا صد هر اپلیکیشنی میخوامو تو وب ۲ بسازم وقتش بود برم سراغ وب ۳ و رفتم ویدیو بوت کمپ رو باز بینی کردم اینبار تمام مطالب مثل اب خوردن بودن و تونستم با ترافل و هاردهت و وب۳ جی اس کمی هم ری اکت برای فرانت اولین قراردادهای هوشمندم رو رو شبکه تستی و واقعی خلق کنم
         </p>
       </VerticalTimelineElement>
     </VerticalTimeline>

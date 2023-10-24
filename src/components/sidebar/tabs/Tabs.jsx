@@ -1,7 +1,6 @@
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import Groups2RoundedIcon from '@mui/icons-material/Groups2Rounded';
 import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 import TextSnippetRoundedIcon from '@mui/icons-material/TextSnippetRounded';
 import PowerRoundedIcon from '@mui/icons-material/PowerRounded';
@@ -9,6 +8,7 @@ import { useContext } from 'react';
 import MYcontext from '../../../context/context';
 import { useTheme } from '@emotion/react';
 import { grey } from '@mui/material/colors';
+import { SiTarget } from 'react-icons/si';
 const TaBs = ({ handleChange }) => {
     const theme = useTheme();
     const { value } = useContext(MYcontext);
@@ -21,7 +21,7 @@ const TaBs = ({ handleChange }) => {
     };
     const tabs = [
         { label: "خانه", icon: <HomeRoundedIcon />, ...tabProps(0) },
-        { label: " مهارت ها", icon: <Groups2RoundedIcon />, ...tabProps(1) },
+        { label: " مهارت ها", icon: <SiTarget/>, ...tabProps(1) },
         { label: "نمونه کارها", icon: <TerminalRoundedIcon />, ...tabProps(2) },
         { label: "رزومه ", icon: <TextSnippetRoundedIcon />, ...tabProps(3) },
         { label: " ارتباط با من", icon: <PowerRoundedIcon />, ...tabProps(4) }

@@ -24,7 +24,7 @@ const Projects = () => {
                 <title>   بیوگرافی من | نمونه کارها </title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{ color: "primary" }} label="نمونه کارها" variant="filled" /></Slide></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{ color: "black" }} label="نمونه کارها" variant="outlined" /></Slide></Divider>
             </Box>
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
                 {Data.map((item, index) => (
