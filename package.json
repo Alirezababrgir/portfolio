@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/Alirezababrgir/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -25,7 +26,7 @@
     "react-particles": "^2.12.2",
     "react-random-reveal": "^2.0.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.16.0",
+    "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-swipeable-views": "^0.14.0",
@@ -41,6 +42,8 @@
     "yup": "^1.3.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -66,6 +69,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.0.0",
     "react-icons": "^4.11.0"
   }
 }
