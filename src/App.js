@@ -20,7 +20,7 @@ function App() {
     setmod("dark");
   }, [])
 
-  const handleTheme=() => {
+  const handleTheme = () => {
     setmod((prevmod) => (prevmod === "light" ? "dark" : "light"))
   }
 
@@ -32,9 +32,12 @@ function App() {
     setdraweropen(draweropen => !draweropen);
   }
 
+  const handlepageformobile = (index) => {
+    setValue(index)
+  };
 
   return (
-    <MYcontext.Provider value={{ value, setValue, draweropen, setdraweropen,handleTheme,mod,handleChange,handlechangetoggle}}>
+    <MYcontext.Provider value={{ value, setValue, draweropen, setdraweropen, handleTheme, mod, handleChange, handlechangetoggle }}>
       <MainLayout>
         <Box sx={{ display: { xs: "block", md: "none" }, position: "absolute" }}>
           <Fab onClick={handlechangetoggle} variant="circular" size="medium" aria-label='sidebar' color='primary' sx={{ m: 3.5 }}>
@@ -57,7 +60,7 @@ function App() {
           <Sidebardrawer handleChange={handleChange} handlechangetoggle={handlechangetoggle} setdraweropen={setdraweropen} />
         </Drawer>
         <Mcontent>
-          <Pages handleChange={handleChange} value={value} />
+          <Pages handleChange={handleChange} value={value} handlepageformobile={handlepageformobile} />
         </Mcontent>
       </MainLayout>
     </MYcontext.Provider>

@@ -7,11 +7,11 @@ import Resoume from './resoumepage';
 import Projects from './projects';
 import ConnectMe from './ConnectMe';
 import { Theme01 } from '../../layuot/theme';
-const Pages = ({ handleChange, value }) => {
+const Pages = ({ handlepageformobile, value }) => {
   return (
-    <SwipeableViews index={value} onChangeIndex={handleChange} axis={Theme01.direction === 'ltr' ? 'x-reverse' : 'x'}>
+    <SwipeableViews index={value} onChangeIndex={handlepageformobile} axis={Theme01.direction === 'ltr' ? 'x-reverse' : 'x'}>
       <Tabpanel index={0}>
-        <Box sx={{ height: "140vh" }}>
+        <Box >
           <Homepage />
         </Box>
       </Tabpanel>
