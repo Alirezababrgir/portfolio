@@ -54,22 +54,23 @@ const Homepage = () => {
             <Helmet>
                 <title>بیوگرافی من | صفحه اصلی</title>
             </Helmet>
-            <Box sx={{ p: 3,height:"20vh" }}>
+            <Box sx={{ p: 3, height: "20vh" }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography>سلام</Typography></Slide></Divider>
             </Box>
             <Zoom direction="up" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
                 <Box sx={{ height: "80vh" }}>
-                    <Box sx={{ backgroundColor: theme.palette.mode === "dark" ? "#1113" : grey, height: "80%", width: "80%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+                    <Box sx={{ backgroundColor: theme.palette.mode === "dark" ? "#3339" : "#9999", height: "80%", width: "80%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
                         <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
                         <Typed
                             strings={['( : سلام من علیرضا هستم']}
                             typeSpeed={40}
+                            style={{ color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}
                         />
                         <br />
                         <Box sx={{ display: "flex" }}>
-                            <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
-                            <Typography sx={{ mx: 0.6 }}>
+                            <TextTransition style={{ color: theme.palette.mode === "dark" ? grey[200] : grey[990] }} springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
+                            <Typography sx={{ mx: 0.6, color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}>
                                 من
                             </Typography>
                         </Box>
