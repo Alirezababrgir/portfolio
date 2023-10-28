@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.7486f911.css",
-    "main.js": "/portfolio/static/js/main.54963854.js",
+    "main.js": "/portfolio/static/js/main.75584d16.js",
     "static/media/Screenshot from 2023-10-18 07-57-46.png": "/portfolio/static/media/Screenshot from 2023-10-18 07-57-46.78eede9936fc5b5e349a.png",
     "static/media/Screenshot from 2023-10-18 08-41-42.png": "/portfolio/static/media/Screenshot from 2023-10-18 08-41-42.a2c83f2a95b4e1e1ff39.png",
     "static/media/world-connection-flatline-bdcc8.png": "/portfolio/static/media/world-connection-flatline-bdcc8.8df4e2658e47abc1d232.png",
     "static/media/wp12749560-grey-macbook-wallpapers.jpg": "/portfolio/static/media/wp12749560-grey-macbook-wallpapers.8d2381ad82c1c36893ba.jpg",
     "index.html": "/portfolio/index.html",
     "main.7486f911.css.map": "/portfolio/static/css/main.7486f911.css.map",
-    "main.54963854.js.map": "/portfolio/static/js/main.54963854.js.map"
+    "main.75584d16.js.map": "/portfolio/static/js/main.75584d16.js.map"
   },
   "entrypoints": [
     "static/css/main.7486f911.css",
-    "static/js/main.54963854.js"
+    "static/js/main.75584d16.js"
   ]
 }
