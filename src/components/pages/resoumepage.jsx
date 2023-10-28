@@ -1,4 +1,4 @@
-import { Box,Divider,Chip } from "@mui/material";
+import { Box,Divider, Typography } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 import MYtimeline  from "./resoumetimeline"
 import {Slide} from "@mui/material";
@@ -18,7 +18,7 @@ const Resoume = () => {
                 <title>بیوگرافی من |  رزومه من</title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-            <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{color:"black"}} label="رزومه" variant="outlined" /></Slide></Divider>
+            <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography>رزومه</Typography></Slide></Divider>
             </Box>
             <MYtimeline/>
         </>

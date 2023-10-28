@@ -1,4 +1,4 @@
-import { Box, Divider, Slide, Typography, Chip } from "@mui/material";
+import { Box, Divider, Slide, Typography} from "@mui/material";
 import Card from '@mui/material/Card';
 import { CardContent, CardMedia, CardActions, Button } from '@mui/material';
 import { Helmet } from "react-helmet-async";
@@ -24,7 +24,7 @@ const Projects = () => {
                 <title>   بیوگرافی من | نمونه کارها </title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{ color: "black" }} label="نمونه کارها" variant="outlined" /></Slide></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography>نمونه کارها</Typography></Slide></Divider>
             </Box>
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
                 {Data.map((item, index) => (

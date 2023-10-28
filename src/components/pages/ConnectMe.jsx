@@ -2,7 +2,6 @@ import { Avatar, Divider, Grid, Slide, TextField, InputAdornment, Button, CardAc
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Chip } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { grey } from "@mui/material/colors";
 import emailpng from "../../assetes/world-connection-flatline-bdcc8.png";
@@ -46,7 +45,7 @@ const ConnectMe = () => {
                 <title>بیوگرافی من | ارتباط با من </title>
             </Helmet>
             <Box sx={{ p: 3, height: "10vh" }}>
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{ color: "black" }} label=" ارتباط با من" variant="outlined" /></Slide></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography>ارتباط با من</Typography></Slide></Divider>
             </Box>
             <Grid container sx={{ height: "90vh", }}>
                 <Zoom direction="down" in={load} style={{ transitionDelay: load ? '1500ms' : '0ms' }}>

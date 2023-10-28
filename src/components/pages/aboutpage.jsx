@@ -1,4 +1,4 @@
-import { Box, Divider, Slide, Typography, Chip } from "@mui/material";
+import { Box, Divider, Slide, Typography } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
@@ -50,7 +50,7 @@ const About = () => {
                 <title> بیوگرافی من | مهارت من  </title>
             </Helmet>
             <Box sx={{ p: 3 }}>
-                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Chip color="info" sx={{ color: "black" }} label="مهارت ها" variant="outlined" /></Slide></Divider>
+                <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography>مهارت ها</Typography></Slide></Divider>
             </Box>
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
                 <Slide direction="down" in={load} style={{ transitionDelay: load ? '600ms' : '0ms' }}>
