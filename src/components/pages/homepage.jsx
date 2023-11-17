@@ -65,12 +65,12 @@ const Homepage = () => {
                         <Typed
                             strings={['( : سلام من علیرضا هستم']}
                             typeSpeed={40}
-                            style={{ color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}
+                            style={{fontSize:"18px", color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}
                         />
                         <br />
                         <Box sx={{ display: "flex" }}>
-                            <TextTransition style={{ color: theme.palette.mode === "dark" ? grey[200] : grey[990] }} springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
-                            <Typography sx={{ mx: 0.6, color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}>
+                            <TextTransition style={{fontSize:"22px", color: theme.palette.mode === "dark" ? grey[200] : grey[990] }} springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
+                            <Typography sx={{fontSize:"22px", mx: 0.6, color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}>
                                 من
                             </Typography>
                         </Box>
