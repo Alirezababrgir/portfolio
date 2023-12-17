@@ -1,20 +1,17 @@
-import { Divider, Slide, Zoom } from "@mui/material";
+import { Divider, Slide } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
-import Typed from 'react-typed';
-import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { Part1 } from "../../layuot/particels";
-import TextTransition, { presets } from 'react-text-transition';
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useTheme } from "@emotion/react";
-import { grey } from "@mui/material/colors";
+import Homecontent from "./Homecontent";
+
 const Homepage = () => {
 
-    const theme = useTheme();
+
     const particlesInit = useCallback(async engine => {
         console.log(engine);
         await loadSlim(engine);
@@ -45,8 +42,6 @@ const Homepage = () => {
         }
     }, []);
 
-    const TEXTS = ['توسعه دهنده فول استک ', 'توسعه دهنده بلاکچین  ', 'عاشق لینوکس هستم'];
-
 
     return (
 
@@ -54,32 +49,15 @@ const Homepage = () => {
             <Helmet>
                 <title>بیوگرافی من | صفحه اصلی</title>
             </Helmet>
-            <Box sx={{ p: 3, height: "20vh" }}>
+            <Box sx={{ p: 3, height: "15vh" }}>
                 <Particles id="tsparticles" options={Part1} init={particlesInit} loaded={particlesLoaded} />
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography>سلام</Typography></Slide></Divider>
             </Box>
-            <Zoom direction="up" in={load} style={{ transitionDelay: load ? '400ms' : '0ms' }}>
-                <Box sx={{ height: "80vh" }}>
-                    <Box sx={{ backgroundColor: theme.palette.mode === "dark" ? "#3339" : "#9999", height: "80%", width: "80%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
-                        <FingerprintIcon color={"primary"} sx={{ height: "100px", width: "100px", mb: 4 }} />
-                        <Typed
-                            strings={['( : سلام من علیرضا هستم']}
-                            typeSpeed={40}
-                            style={{fontSize:"18px", color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}
-                        />
-                        <br />
-                        <Box sx={{ display: "flex" }}>
-                            <TextTransition style={{fontSize:"22px", color: theme.palette.mode === "dark" ? grey[200] : grey[990] }} springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
-                            <Typography sx={{fontSize:"22px", mx: 0.6, color: theme.palette.mode === "dark" ? grey[200] : grey[990] }}>
-                                من
-                            </Typography>
-                        </Box>
-                    </Box>
-                </Box>
-            </Zoom>
+            <Box sx={{ height: "85vh" }}>
+                <Homecontent index={index} />
+            </Box >
         </>
-
-
     )
 }
 export default Homepage;
+
