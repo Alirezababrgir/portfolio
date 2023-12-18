@@ -1,4 +1,4 @@
-import { Box, Divider, Slide, Typography} from "@mui/material";
+import { Box, Divider, Slide, Typography } from "@mui/material";
 import Card from '@mui/material/Card';
 import { CardContent, CardMedia, CardActions, Button } from '@mui/material';
 import { Helmet } from "react-helmet-async";
@@ -29,26 +29,27 @@ const Projects = () => {
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
                 {Data.map((item, index) => (
                     <Slide direction="left" in={load} style={{ transitionDelay: load ? `${item.Slideload}` : '0ms' }}>
-                        <Card sx={{ width: 280, height: 400, mx: 4, my: 4 }} key={index}>
+                        <Card className="badge" sx={{ width: 280, height: 400, mx: 4, my: 4 }} key={index}>
                             <CardMedia
+                                className="scale-up-center"
                                 component="img"
                                 alt={item.Tittle}
-                                height="140"
+                                height="120"
                                 image={item.Img}
-                                sx={{ height: 200 }}
+                                sx={{ height: 160 }}
                             />
                             <CardContent sx={{ backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], height: 150 }}>
-                                <Divider variant="middle" textAlign="center" sx={{ mt: 1, mb: 1, "&::before,&::after": { borderColor: "text.secondary" } }}>
+                                <Divider variant="middle" textAlign="center" sx={{ mt: 1, mb: 4, "&::before,&::after": { borderColor: "text.secondary" } }}>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {item.Tittle}
                                     </Typography>
                                 </Divider>
-                                <Typography sx={{ direction: "ltr" }} variant="body2" color="text.secondary">
-                                    <EllipsisText text={item.Info} length={"70"} />
+                                <Typography sx={{ direction: "ltr", fontSize: "14px" }} variant="body1" color="text.secondary">
+                                    <EllipsisText text={item.Info} length={"80"} />
                                 </Typography>
                             </CardContent>
-                            <CardActions sx={{backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900]}}>
-                                <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "row-reverse", backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900]}}>
+                            <CardActions sx={{ backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900] }}>
+                                <Box className="text" sx={{ display: "flex", justifyContent: "center", flexDirection: "row-reverse", backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900] }}>
                                     <Button size="small">مشاهده</Button>
                                     <Button target="blank" href={item.LinkGithub} size="small">{item.Icongithub}</Button>
                                 </Box>
