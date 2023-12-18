@@ -226,14 +226,15 @@ body {
   float: left;
   left: 30px;
   top: -40px;
-  height: 250px;
-  width: 310px;
+  height: 350px;
+  width: 290px;
   margin-right: 200px;
+  /*
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);*/
   overflow: hidden;
-  border-radius: 1rem
+  border-radius: 1rem;
 }
 
 /*object-fit: cover;*/
