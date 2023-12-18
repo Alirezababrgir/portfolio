@@ -207,38 +207,38 @@ body {
 
 
 
-/* The card */
 .card {
-  background-color: #8888;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 34%, rgba(0, 0, 0, 0.05926120448179273) 100%, rgba(180, 61, 176, 1) 100%);
   border-radius: 1rem;
   position: relative;
-  height: 75%;
-  width: 78%;
+  height: 78%;
+  width: 80%;
   margin: 50px auto;
   -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
 }
 
-/* Image on the left side */
+@media only screen and (max-width: 600px) {
+  .card {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.05926120448179273) 0%, rgba(255, 255, 255, 1) 46%, rgba(255, 255, 255, 1) 100%);
+  }
+}
+
 .thumbnail {
   position: relative;
   float: left;
-  left: 30px;
-  top: -40px;
-  height: 350px;
-  width: 290px;
-  margin-right: 200px;
-  /*
-  -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);*/
+  left: 10px;
+  top: -60px;
+  height: 400px;
+  width: 380px;
+  margin-right: 100px;
   overflow: hidden;
   border-radius: 1rem;
 }
 
-/*object-fit: cover;*/
-/*object-position: center;*/
 img.left {
   position: absolute;
   left: 50%;
@@ -251,8 +251,8 @@ img.left {
 }
 
 h1 {
-  font-size: 1rem;
-  padding-top: 10rem;
+  font-size: 1px;
+  padding-top: 12rem;
   color: #4B4B4B;
 }
 
@@ -264,20 +264,13 @@ h2 {
   font-size: 0.8rem;
 }
 
-.separator {
-  margin-top: 10px;
-  border: 1px solid #C3C3C3;
-}
 
-
-
-/* DATE of release*/
 h5 {
   position: absolute;
   left: 30px;
   bottom: -120px;
   font-size: 7rem;
-  color: #555;
+  color: #CB9D3D;
 }
 
 .h6 {
@@ -288,7 +281,6 @@ h5 {
   color: #C3C3C3;
 }
 
-/* Those futur buttons */
 ul {
   margin-left: 250px;
 }
@@ -300,12 +292,8 @@ li {
   color: #7B7B7B;
 }
 
-.right {
-  margin-left: 10%;
-  margin-right: 10%;
-}
 
-/* Floating action button */
+
 .fab {
   position: absolute;
   right: 50px;
@@ -593,5 +581,48 @@ li {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1)
+  }
+}
+
+.tracking-in-contract-bck {
+  -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(.215, .61, .355, 1.000) both;
+  animation: tracking-in-contract-bck 1s cubic-bezier(.215, .61, .355, 1.000) both
+}
+
+@-webkit-keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
+
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0
+  }
+
+  40% {
+    opacity: .6
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1
   }
 }
