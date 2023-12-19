@@ -29,7 +29,7 @@ const Projects = () => {
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
                 {Data.map((item, index) => (
                     <Slide direction="left" in={load} style={{ transitionDelay: load ? `${item.Slideload}` : '0ms' }}>
-                        <Card className="badge" sx={{ width: 280, height: 400, mx: 4, my: 4 }} key={index}>
+                        <Card className="badge" sx={{  mx: 4, my: 4 ,borderRadius:"1rem"}} key={index}>
                             <CardMedia
                                 className="scale-up-center"
                                 component="img"

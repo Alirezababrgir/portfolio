@@ -16,8 +16,8 @@ export const CircularProgressWithLabel = (prop) => {
 
   return (
     <Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}>
-      <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-        <CircularProgress variant="determinate" {...prop} color={prop.c} sx={{ opacity: "100%" }} />
+      <Box sx={{ position: 'relative', display: 'inline-flex'}}>
+        <CircularProgress variant="determinate" {...prop} color={prop.c} sx={{ opacity: "100%"}} />
         <Box
           sx={{
             top: 0,

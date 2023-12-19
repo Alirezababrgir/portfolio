@@ -2,34 +2,11 @@ import { Box, Divider, Slide, Typography } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
-import { CircularWithValueLabel } from "./progressbar";
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import { useTheme } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import {
-    SiSolidity,
-    SiNodedotjs,
-    SiReact,
-    SiHtml5,
-    SiCss3,
-    SiGit,
-    SiGithub,
-    SiRedux,
-    SiMongodb,
-    SiJavascript,
-    SiMaterialdesign,
-    SiBootstrap,
-    SiTailwindcss,
-    SiLinux,
-    SiIntellijidea,
-    SiMysql,
-    SiNextdotjs,
-    SiWeb3Dotjs,
-    SiAlchemy,
-    SiVisualstudiocode,
-
-} from "react-icons/si";
+import { devSkills } from "./ProjectsData/skillicon";
 
 
 
@@ -53,53 +30,83 @@ const About = () => {
                 <Divider variant="middle" textAlign="right" sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "black" } }}><Slide direction="down" in={load} style={{ transitionDelay: load ? '1000ms' : '0ms' }}><Typography>مهارت ها</Typography></Slide></Divider>
             </Box>
             <Box sx={{ height: "55%", width: "90%", borderRadius: "0.5rem", margin: " 0 auto", display: "flex", justifyContent: "center", flexDirection: "row-reverse", alignItems: "center", flexWrap: "wrap" }}>
-                <Slide direction="down" in={load} style={{ transitionDelay: load ? '600ms' : '0ms' }}>
-                    <Card sx={{ maxWidth: 800, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], borderRadius: "0.5rem" }}>
-                        <CardActionArea>
-                            <CardContent>
-                                <Divider sx={{ mb: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  Languages  </Divider>
-                                <Divider textAlign="right">
-                                    <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
-                                        <SiHtml5 />  Html <SiCss3 />css
+                {devSkills.map((item, index) => (
+                    <Slide direction="down" in={load} style={{ transitionDelay: load ? '600ms' : '0ms' }}>
+                        <Card key={index} className="badge" sx={{ backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], mx: 4, my: 4, borderRadius: "1rem" }}>
+                            <CardActionArea>
+                                <CardContent>
+                                    <Divider sx={{ mt: 2, mb: 1, "&::before,&::after": { borderColor: "text.primary" } }}>
+                                        <Typography variant="body1" color="text.primary" sx={{ p: 0.6, mb: 1.2, fontSize: "16px" }}>
+                                            {item.name}
+                                        </Typography>
+                                        <Typography sx={{ fontSize: "1.2rem", opacity: "60%" }} variant="h4" color="text.secondary">
+                                            {item.Icon} {item.icon2} {item.icon3}
+                                        </Typography>
+                                    </Divider>
+                                    <Divider sx={{ mb: 2 }} textAlign="left">
+                                        {item.proccessbar}
+                                    </Divider>
+
+                                    <Divider textAlign="right">
+                                        <Typography sx={{ fontSize: "1rem", opacity: "60%" }} variant="h4" color="text.info">
+                                            توضیحات
+                                        </Typography>
+                                    </Divider>
+                                    <Typography sx={{ fontSize: "0.9rem", opacity: "60%", mt: 2 }} variant="h4" color="text.secondary">
+                                        {item.info}
                                     </Typography>
-                                    <CircularWithValueLabel value={70} c={"info"} />
-                                </Divider>
-                                <Divider textAlign="left">
-                                    <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
-                                        Node.js <SiNodedotjs />
-                                    </Typography>
-                                    <CircularWithValueLabel value={85} c={"info"} />
-                                </Divider>
-                                <Divider textAlign="right">
-                                    <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
-                                        Javascript <SiJavascript />
-                                    </Typography>
-                                    <CircularWithValueLabel value={85} c={"info"} />
-                                </Divider>
-                                <Divider textAlign="left">
-                                    <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
-                                        Solidity <SiSolidity />
-                                    </Typography>
-                                    <CircularWithValueLabel value={70} c={"info"} />
-                                </Divider>
-                                <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  Database </Divider>
-                                <Divider textAlign="right">
-                                    <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
-                                        Mongodb <SiMongodb />
-                                    </Typography>
-                                    <CircularWithValueLabel value={65} c={"success"} />
-                                </Divider>
-                                <Divider textAlign="left">
-                                    <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
-                                        Mysql <SiMysql />
-                                    </Typography>
-                                    <CircularWithValueLabel value={45} c={"success"} />
-                                </Divider>
-                            </CardContent>
-                        </CardActionArea>
-                    </Card>
-                </Slide>
-                <Slide direction="down" in={load} style={{ transitionDelay: load ? '500ms' : '0ms' }}>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Slide>
+                ))}
+            </Box>
+        </>
+    )
+}
+export default About;
+
+
+/*
+
+
+
+ <Divider textAlign="left">
+                                        <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
+                                            Node.js <SiNodedotjs />
+                                        </Typography>
+                                        <CircularWithValueLabel value={85} c={"info"} />
+                                    </Divider>
+                                    <Divider textAlign="right">
+                                        <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
+                                            <SiJavascript />
+                                        </Typography>
+                                        <CircularWithValueLabel value={85} c={"info"} />
+                                    </Divider>
+                                    <Divider textAlign="left">
+                                        <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
+                                            Solidity <SiSolidity />
+                                        </Typography>
+                                        <CircularWithValueLabel value={70} c={"info"} />
+                                    </Divider>
+                                    <Divider sx={{ mb: 1.5, mt: 1.5, "&::before,&::after": { borderColor: "text.primary" } }}>  Database </Divider>
+                                    <Divider textAlign="right">
+                                        <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
+                                            Mongodb <SiMongodb />
+                                        </Typography>
+                                        <CircularWithValueLabel value={65} c={"success"} />
+                                    </Divider>
+                                    <Divider textAlign="left">
+                                        <Typography variant="body2" color="text.secondary" sx={{ p: 0.5 }}>
+                                            Mysql <SiMysql />
+                                        </Typography>
+                                        <CircularWithValueLabel value={45} c={"success"} />
+                                    </Divider>
+
+
+
+
+ <Slide direction="down" in={load} style={{ transitionDelay: load ? '500ms' : '0ms' }}>
 
                     <Card sx={{ maxWidth: 1000, width: 390, height: 560, p: 0.5, mx: 4, my: 2, backgroundColor: theme.palette.mode === "light" ? "#999" : grey[900], borderRadius: "0.5rem" }}>
                         <CardActionArea>
@@ -234,9 +241,4 @@ const About = () => {
                             </CardContent>
                         </CardActionArea>
                     </Card>
-                </Slide>
-            </Box>
-        </>
-    )
-}
-export default About;
+                </Slide>*/

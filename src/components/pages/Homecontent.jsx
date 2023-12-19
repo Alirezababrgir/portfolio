@@ -24,7 +24,7 @@ const Homecontent = ({ index }) => {
                     <TextTransition style={{ fontSize: "35px" }} springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>
                 </h1>
             </Box>
-            <h5 className="bounce-in-top"><SiBitcoin /></h5>
+            <h5 className="bounce-in-top h5"><SiBitcoin /></h5>
             <p className="h6 tracking-in-contract-bck">DECENTRALIZE THE WORLD!</p>
         </Box>
     )
